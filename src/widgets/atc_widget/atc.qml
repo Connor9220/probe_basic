@@ -21,7 +21,7 @@ Rectangle {
         z: 0
         rotation: 0
         transformOrigin: Item.Center
-        source: "images/carousel_"+pocket_slots+".png"
+        source: "images/rack_"+pocket_slots+".png"
 
 
         RotationAnimator {
@@ -58,7 +58,7 @@ Rectangle {
 //                    border.color: "black"
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.top: parent.top
-                    anchors.topMargin: pocket_position
+                    anchors.topMargin: pocket_position - 100 
                     border.width: 0
 
                     Text {
@@ -112,12 +112,12 @@ Rectangle {
                     border.color: "grey"
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.top: parent.top
-                    anchors.topMargin: pocket_position - (tool_diam/2) - 30
+                    anchors.topMargin: pocket_position - (tool_diam/2) - 125
                     border.width: 2
 
                     Text {
                         id: tool_text
-                        text: "T" + tool_item.tool_num
+                        text: tool_item.tool_num
                         font.family: "Bebas Kai"
                         font.bold: false
                         verticalAlignment: Text.AlignVCenter
@@ -205,7 +205,7 @@ Rectangle {
     // Carousel Properties
     property int pocket_slots: 12;
 
-    property int pocket_position: 100;
+    property int pocket_position: 50;
     property int pocket_diam: 32;
     property int tool_diam: 30;
 
