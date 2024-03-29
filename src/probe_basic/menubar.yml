@@ -3,10 +3,6 @@ menubar:
   # File Menu
   - title: File
     items:
-    - title: "&Open ..."
-      action: win.openFile
-      shortcut: ctrl+o
-
     - title: "&Recent Files"
       provider: qtpyvcp.widgets.recent_files_menu:RecentFilesMenu
 
