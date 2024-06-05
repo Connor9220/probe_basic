@@ -3,10 +3,6 @@ menubar:
   # File Menu
   - title: File
     items:
-    - title: "&Open ..."
-      action: win.openFile
-      shortcut: ctrl+o
-
     - title: "&Recent Files"
       provider: qtpyvcp.widgets.recent_files_menu:RecentFilesMenu
 
@@ -24,6 +20,10 @@ menubar:
     - title: Exit
       action: app.exit # or win.close
       shortcut: ctrl+q
+
+    - title: Shutdown
+      action: win.showDialog
+      args: [shutdown]
 
   # Machine Menu
   - title: Machine

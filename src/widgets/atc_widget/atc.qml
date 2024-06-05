@@ -21,7 +21,7 @@ Rectangle {
         z: 0
         rotation: 0
         transformOrigin: Item.Center
-        source: "images/carousel_"+pocket_slots+".png"
+        source: "images/rack_"+pocket_slots+".png"
 
 
         RotationAnimator {
@@ -42,8 +42,7 @@ Rectangle {
 
                 height: atc_holder.height/2
                 transformOrigin: Item.Bottom
-                rotation: -index * 360/pocket_slots - 90
-                x: atc_holder.width/2
+                x: 25 + (index * tool_diam)
                 y: 0
 
                 property string pocket_num: index+1
@@ -59,10 +58,8 @@ Rectangle {
 //                    border.color: "black"
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.top: parent.top
-                    anchors.topMargin: pocket_position
+                    anchors.topMargin: pocket_position - 100 
                     border.width: 0
-                    rotation: 360/pocket_slots * index + 90
-
 
                     Text {
                         id: pocket_text
@@ -97,8 +94,7 @@ Rectangle {
                 id: tool_item
                 height: atc_holder.height/2
                 transformOrigin: Item.Bottom
-                rotation: -index * 360/pocket_slots + 90
-                x: atc_holder.width/2
+                x: 25 + (index * tool_diam)
                 y: 0
 
                 state: "visible"
@@ -109,20 +105,19 @@ Rectangle {
                 Rectangle {
                     id: tool_rectangle
 
-                    height: tool_diam
-                    width: tool_diam
-                    radius: tool_diam/2
+                    height: tool_diam*.75
+                    width: tool_diam*.75
+                    radius: (tool_diam*.75)/2
                     color: "white"
                     border.color: "grey"
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.top: parent.top
-                    anchors.topMargin: 4
+                    anchors.topMargin: pocket_position - (tool_diam/2) - 125
                     border.width: 2
-                    rotation: 360/pocket_slots * index - 90
 
                     Text {
                         id: tool_text
-                        text: "T" + tool_item.tool_num
+                        text: tool_item.tool_num
                         font.family: "Bebas Kai"
                         font.bold: false
                         verticalAlignment: Text.AlignVCenter
@@ -210,9 +205,9 @@ Rectangle {
     // Carousel Properties
     property int pocket_slots: 12;
 
-    property int pocket_position: 100;
+    property int pocket_position: 50;
     property int pocket_diam: 32;
-    property int tool_diam: 70;
+    property int tool_diam: 30;
 
     property int prev_pocket: 1;
 
@@ -318,8 +313,9 @@ Rectangle {
             widget_width = width;
             widget_height = height;
             pocket_position = width - ((width/2) * 0.5);
-            tool_diam = width/ 7.85;
+            tool_diam = width/12;
         }
+
         function onBgColorSig(color) {
             bg_color = color;
         }
