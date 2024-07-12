@@ -8,10 +8,11 @@
 o<unload_spindle> sub
 (PRINT, o<load_spindle_safety>)
 
-M61 Q0
-G49
-#5210 = 0
-#3991 = 0
+;M61 Q0
+;G49
+;#5210 = 0
+;#3991 = 0
+#3992=1 M6 T0
 
 o<unload_spindle> endsub
 

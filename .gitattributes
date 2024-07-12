@@ -1,1 +1,6 @@
 src/probe_basic/_version.py export-subst
+configs/probe_basic/subroutines/go_to_home.ngc merge=ours 
+configs/probe_basic/subroutines/m10.ngc merge=ours
+configs/probe_basic/subroutines/m11.ngc merge=ours
+configs/probe_basic/subroutines/m12.ngc merge=ours
+configs/probe_basic/subroutines/m13.ngc merge=ours
