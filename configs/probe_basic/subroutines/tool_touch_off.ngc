@@ -18,10 +18,6 @@ o<tool_touch_off> sub
 
 G92.1    (Cancel G92 offset)
 
-M64 P #<_ini[ATC_PINS]CLEAN_TS>
-G4  P.5
-M65 P #<_ini[ATC_PINS]CLEAN_TS>
-
 #<tool_touch_x_coords> = #5181
 #<tool_touch_y_coords> = #5182
 #<tool_touch_z_coords> = #5183
@@ -51,6 +47,11 @@ o110 endif
 G90    (set absolute coordinates)
 G53 G1 F[#<traverse_fr>] Z0    (move to z0 home position)
 G53 G1 F[#<traverse_fr>] X#<tool_touch_x_coords> Y#<tool_touch_y_coords>
+
+M64 P #<_ini[ATC_PINS]CLEAN_TS>
+G4  P.5
+M65 P #<_ini[ATC_PINS]CLEAN_TS>
+
 G53 G1 F[#<traverse_fr>] Z#<tool_touch_z_coords>
 
 #<offset_z> = #5422         ;Stores the offset of the current Z coordinate.
@@ -63,6 +64,9 @@ G1 F[#<traverse_fr>] Z[#<retract_distance>]    (retract tool retract distance am
 
 (Slow Probe Rule, if Slow Probe FR is set to 0, Slow Probe is Bypassed)
 o120 if [#<slow_probe_fr> GT 0]
+    M64 P #<_ini[ATC_PINS]CLEAN_TS>
+    G4  P.5
+    M65 P #<_ini[ATC_PINS]CLEAN_TS>
     (Initiate Slow Z- Probe)
     G91
     F[#<slow_probe_fr>]    (set probe slow feedrate)
