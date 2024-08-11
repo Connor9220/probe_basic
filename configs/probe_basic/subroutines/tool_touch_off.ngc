@@ -16,7 +16,7 @@ o<tool_touch_off> sub
 #<tool_diameter_offset_mode> = #3012    (activates the tool diameter offset position for probe subroutine section)
 #<tool_setter_offset_direction> = #3013    (sets tool setter offset direction to move tool)
 #<tool_diameter> = #5410    (current tool's diameter used for offseting probe position in x axis)
-
+M50 P0   (Disable Feed Override) 
 G92.1    (Cancel G92 offset)
 
 #<tool_touch_x_coords> = #5181
@@ -107,6 +107,7 @@ G10 L1 P #5400 Z [#<new_tool_length_offset>]  (5400 = tool number)
 
 T #5400 G43  H #5400    (enable tool length offset)
 #5000=2 
+M50 (Enable Feed Override)
 o<tool_touch_off> endsub
 
 M2 (end program)
