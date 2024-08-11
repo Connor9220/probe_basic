@@ -1,5 +1,5 @@
 o<go_to_zero> sub
-
+(DEBUG, EVAL[vcp.getWidget{"vtk"}.setViewMachine{}])
 M73
 G90
 o100 if [#5422 LT 0]

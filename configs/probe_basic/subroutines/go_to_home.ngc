@@ -1,4 +1,5 @@
 o<go_to_home> sub
+ (DEBUG, EVAL[vcp.getWidget{"vtk"}.setViewMachine{}])
  M73
  G20
  G90
