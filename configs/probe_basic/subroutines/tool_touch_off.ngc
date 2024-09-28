@@ -4,6 +4,7 @@
 
 o<tool_touch_off> sub
 (DEBUG, EVAL[vcp.getWidget{"vtk"}.setViewMachine{}])
+(AXIS,hide)
 
 #<fast_probe_fr> = #3004    (set from probe screen fast probe feed rate)
 #<slow_probe_fr> = #3005    (set from probe screen slow probe feedrate)
@@ -110,7 +111,7 @@ T #5400 G43  H #5400    (enable tool length offset)
 
 #5000=2
 M50 P1  (reinstate feedrate override)
-
+(AXIS,show)
 
 o<tool_touch_off> endsub
 
