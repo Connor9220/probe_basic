@@ -47,6 +47,5 @@ sim/*.old
 /debian/python3-probe-basic.postinst.debhelper
 /debian/python3-probe-basic.substvars
 /debian/python3-probe-basic.postrm.debhelper
-
 /.pybuild/
 /build.sh
