@@ -107,8 +107,7 @@ Installation Commands
 
     Note: When updating/installing the latest .deb files, the Probe Basic sim configuration files will be overwritten. It is strongly recommended to create your machine configuration files with unique names to avoid having them overwritten during updates.
 
-    To build your own machine configuration, please follow the instructions in this document:
-    https://forum.linuxcnc.org/qtpyvcp/48401-configuration-file-conversion-doc-for-probe-basic-py3
+    To build your own machine configuration, please follow the Machine Config section of the docs.
 
 
 Uninstallation
@@ -119,8 +118,10 @@ Uninstallation
     .. code-block:: bash
 
         sudo dpkg -P python3-probe-basic
-        sudo dpkg -P python3-hiyapyco
+        
         sudo dpkg -P python3-qtpyvcp
+
+        sudo dpkg -P python3-hiyapyco
     
     |
     

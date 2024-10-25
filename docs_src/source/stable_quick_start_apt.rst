@@ -43,6 +43,8 @@ Installation Steps
     .. code-block:: bash
 
         sudo apt update
+        
+        
         sudo apt upgrade
 
 
@@ -56,17 +58,47 @@ Installation Steps
     Once you have installed LinuxCNC, open it and start the axis sim briefly, then shut it down to ensure the installation was successful.
 
 
-4. Add the APT Repository
-^^^^^^^^^^^^^^^^^^^^^^^^^
+4. Add the APT Repository for the Installation type
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    Run the following commands in the main terminal:
+    **AMD64 for PC Installation Repository:**
+    
+        Run the following commands in the main terminal one at a time:
 
-    .. code-block:: bash
+        .. code-block:: bash
 
-        sudo apt install curl
-        echo 'deb [arch=amd64] https://repository.qtpyvcp.com/apt stable main' | sudo tee /etc/apt/sources.list.d/kcjengr.list
-        curl -sS https://repository.qtpyvcp.com/repo/kcjengr.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/kcjengr.gpg
-        gpg --keyserver keys.openpgp.org --recv-key 2DEC041F290DF85A
+            sudo apt install curl
+
+
+            echo 'deb [arch=amd64] https://repository.qtpyvcp.com/apt stable main' | sudo tee /etc/apt/sources.list.d/kcjengr.list
+
+
+            curl -sS https://repository.qtpyvcp.com/repo/kcjengr.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/kcjengr.gpg
+
+
+            gpg --keyserver keys.openpgp.org --recv-key 2DEC041F290DF85A
+
+
+
+    
+    **ARM64 Raspberry Pi 4 and 5 Installation Repository:**
+    
+        Run the following commands in the main terminal one at a time:
+
+        .. code-block:: bash
+
+            sudo apt install curl
+
+
+            echo 'deb [arch=arm64] https://repository.qtpyvcp.com/apt stable main' | sudo tee /etc/apt/sources.list.d/kcjengr.list
+
+
+            curl -sS https://repository.qtpyvcp.com/repo/kcjengr.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/kcjengr.gpg
+
+
+            gpg --keyserver keys.openpgp.org --recv-key 2DEC041F290DF85A
+
+
 
 
 5. Update the Repositories
@@ -82,8 +114,12 @@ Installation Steps
 
     .. code-block:: bash
 
+
         sudo apt install python3-qtpyvcp
+
+
         sudo apt install python3-probe-basic
+
 
     Congratulations! You have now installed Probe Basic. You should be able to launch the Probe Basic sim from within the LinuxCNC applications dropdown menu.
 
