@@ -12,9 +12,14 @@ from qtpy.QtGui import QFontDatabase, QRegExpValidator
 from qtpy.QtWidgets import QAbstractButton
 
 from qtpyvcp import actions
+from qtpyvcp.plugins import getPlugin
 from qtpyvcp.utilities import logger
 from qtpyvcp.widgets.form_widgets.main_window import VCPMainWindow
 from qtpyvcp.utilities.settings import getSetting, setSetting
+
+from qtpyvcp import hal
+from qtpyvcp.hal import getComponent
+
 
 
 sys.path.insert(0,'/usr/lib/python3/dist-packages/probe_basic')
@@ -49,10 +54,54 @@ class ProbeBasic(VCPMainWindow):
         
         else:
             self.spindle_rpm_source_widget.setCurrentIndex(self.spindle_encoder_rpm_button.property('page'))
-    
+            
+
         self.load_user_tabs()
         
         self.load_user_buttons()
+        
+        self.g5x_index = None
+        
+        self._status = getPlugin('status')
+        
+        self._status.g5x_offset.notify(self.get_extents)
+        self._status.g5x_index.notify(self.on_g5x_changed)
+        
+        self.extents_comp = getComponent()
+        self.extents_comp.addPin("xmin", "float", "io")
+        self.extents_comp.addPin("ymin", "float", "io")
+        self.extents_comp.addPin("xmax", "float", "io")
+        self.extents_comp.addPin("ymax", "float", "io")
+        
+    
+    def on_g5x_changed(self, index):
+        
+        print("###################3")
+        print(f"PART INDEX {index}")
+        
+        self.g5x_index = index
+        self.get_extents()
+    
+    def get_extents(self, *arg, **args):
+        
+        print("###################3")
+        
+        if self.g5x_index is not None:
+            index = self.g5x_index -1
+            if index in self.vtk.program_bounds_actors.keys():
+                bounds = self.vtk.program_bounds_actors[index]
+                print("BOUNDS")
+                
+                print(bounds.path_actor.GetBounds())
+                
+                x_min, x_max, y_min, y_max, z_min, z_max = bounds.path_actor.GetBounds()
+                
+                
+                self.extents_comp.getPin('xmin').value = x_min
+                self.extents_comp.getPin('ymin').value = y_min
+                self.extents_comp.getPin('xmax').value = x_max
+                self.extents_comp.getPin('ymax').value = y_max
+
 
     def load_user_buttons(self):
         self.user_button_modules = {}
