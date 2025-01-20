@@ -49,3 +49,4 @@ sim/*.old
 /debian/python3-probe-basic.postrm.debhelper
 /.pybuild/
 /build.sh
+.dbeaver

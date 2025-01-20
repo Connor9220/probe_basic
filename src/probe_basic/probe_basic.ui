@@ -362,7 +362,7 @@ QTabWidget QTabBar::tab {
            <enum>QTabWidget::South</enum>
           </property>
           <property name="currentIndex">
-           <number>8</number>
+           <number>3</number>
           </property>
           <property name="usesScrollButtons">
            <bool>false</bool>
@@ -8673,6 +8673,9 @@ QPushButton:checked {
                        <bold>false</bold>
                       </font>
                      </property>
+                     <property name="tabletTracking">
+                      <bool>false</bool>
+                     </property>
                      <property name="focusPolicy">
                       <enum>Qt::NoFocus</enum>
                      </property>
@@ -8708,9 +8711,16 @@ QPushButton:checked {
                      </property>
                      <property name="currentToolColor" stdset="0">
                       <color>
-                       <red>42</red>
-                       <green>56</green>
+                       <red>255</red>
+                       <green>255</green>
                        <blue>255</blue>
+                      </color>
+                     </property>
+                     <property name="currentToolBackground" stdset="0">
+                      <color>
+                       <red>93</red>
+                       <green>95</green>
+                       <blue>239</blue>
                       </color>
                      </property>
                      <property name="displayColumns" stdset="0">
@@ -8743,6 +8753,114 @@ QPushButton:checked {
                      <attribute name="verticalHeaderHighlightSections">
                       <bool>false</bool>
                      </attribute>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QWidget" name="widget_78" native="true">
+                     <property name="minimumSize">
+                      <size>
+                       <width>200</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>250</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QLabel{
+    color: rgb(238, 238, 236);
+	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_80">
+                      <property name="spacing">
+                       <number>3</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QLabel" name="tool_db_label">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>35</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>35</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QLabel{
+    border-style: solid;
+    border-color: rgb(176, 179, 172);
+    border-width: 2px;
+    border-radius: 5px;
+    color: white;
+    background: rgb(90, 90, 90);
+	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>TOOL PROPERTy</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="DBIntField" name="dbintfield">
+                        <property name="layoutDirection">
+                         <enum>Qt::LeftToRight</enum>
+                        </property>
+                        <property name="labelText" stdset="0">
+                         <string>TOOL</string>
+                        </property>
+                        <property name="maximum" stdset="0">
+                         <number>99999</number>
+                        </property>
+                        <property name="query" stdset="0">
+                         <string>Tool.tool_no</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="DBCheckBoxField" name="dbcheckboxfield">
+                        <property name="layoutDirection">
+                         <enum>Qt::LeftToRight</enum>
+                        </property>
+                        <property name="labelText" stdset="0">
+                         <string>ATC</string>
+                        </property>
+                        <property name="query" stdset="0">
+                         <string>ToolProperties.atc</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_8">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>1</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                   </layout>
@@ -8878,6 +8996,39 @@ QPushButton:checked {
                      </property>
                      <property name="text">
                       <string>RELOAD TABLE</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="db_property_update_btn">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>160</width>
+                       <height>33</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>140</width>
+                       <height>33</height>
+                      </size>
+                     </property>
+                     <property name="focusPolicy">
+                      <enum>Qt::NoFocus</enum>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+   	font: 14pt &quot;Bebas Kai&quot;;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>UPDATE DB</string>
                      </property>
                     </widget>
                    </item>
@@ -10436,9 +10587,16 @@ QPushButton:checked {
                      </property>
                      <property name="currentRowColor" stdset="0">
                       <color>
-                       <red>0</red>
-                       <green>38</green>
+                       <red>255</red>
+                       <green>255</green>
                        <blue>255</blue>
+                      </color>
+                     </property>
+                     <property name="currentRowBackground" stdset="0">
+                      <color>
+                       <red>93</red>
+                       <green>95</green>
+                       <blue>239</blue>
                       </color>
                      </property>
                      <property name="displayColumns" stdset="0">
@@ -25277,7 +25435,7 @@ background: transparent;
                          <number>1</number>
                         </property>
                         <item>
-                         <widget class="QLabel" name="label_59">
+                         <widget class="SubCallButton" name="probe_spindle_nose_subcallbutton">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -25286,99 +25444,21 @@ background: transparent;
                           </property>
                           <property name="minimumSize">
                            <size>
-                            <width>23</width>
-                            <height>33</height>
+                            <width>250</width>
+                            <height>38</height>
                            </size>
                           </property>
                           <property name="maximumSize">
                            <size>
-                            <width>23</width>
-                            <height>33</height>
+                            <width>250</width>
+                            <height>38</height>
                            </size>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QLabel{
-font: 75 16pt &quot;Bebas Kai&quot;;
-color: rgb(255, 255, 255);
-padding-right: 1px;
-padding-left: 5px;
-}</string>
                           </property>
                           <property name="text">
-                           <string>X</string>
+                           <string>PROBE SPINDLE NOSE ZERO</string>
                           </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QWidget" name="widget_72" native="true">
-                          <property name="minimumSize">
-                           <size>
-                            <width>20</width>
-                            <height>0</height>
-                           </size>
-                          </property>
-                          <property name="maximumSize">
-                           <size>
-                            <width>20</width>
-                            <height>16777215</height>
-                           </size>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="VCPSettingsLineEdit" name="x_tool_change_position">
-                          <property name="sizePolicy">
-                           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                           </sizepolicy>
-                          </property>
-                          <property name="minimumSize">
-                           <size>
-                            <width>110</width>
-                            <height>31</height>
-                           </size>
-                          </property>
-                          <property name="maximumSize">
-                           <size>
-                            <width>110</width>
-                            <height>31</height>
-                           </size>
-                          </property>
-                          <property name="focusPolicy">
-                           <enum>Qt::ClickFocus</enum>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">VCPSettingsLineEdit {
-    border-style: transparent;
-    border-color: rgb(235, 235, 235);
-    border-width: 1px;
-    border-radius: 5px;
-    color: black;
-    background: rgb(235, 235, 235);
-	font: 15pt &quot;Bebas Kai&quot;;
-}</string>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                          </property>
-                          <property name="readOnly">
-                           <bool>true</bool>
-                          </property>
-                          <property name="placeholderText">
-                           <string>0.0000</string>
-                          </property>
-                          <property name="rules" stdset="0">
-                           <string>[]</string>
-                          </property>
-                          <property name="settingName" stdset="0">
-                           <string>tool-change-position.x-tool-change-position</string>
-                          </property>
-                          <property name="textFormat" stdset="0">
-                           <string>{:.4f}</string>
+                          <property name="filename" stdset="0">
+                           <string>probe_spindle_nose.ngc</string>
                           </property>
                          </widget>
                         </item>
@@ -25502,7 +25582,7 @@ color: white;
                          <number>1</number>
                         </property>
                         <item>
-                         <widget class="QLabel" name="label_60">
+                         <widget class="QLabel" name="label_59">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -25530,7 +25610,7 @@ padding-left: 5px;
 }</string>
                           </property>
                           <property name="text">
-                           <string>Y</string>
+                           <string>X</string>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -25538,7 +25618,7 @@ padding-left: 5px;
                          </widget>
                         </item>
                         <item>
-                         <widget class="QWidget" name="widget_74" native="true">
+                         <widget class="QWidget" name="widget_72" native="true">
                           <property name="minimumSize">
                            <size>
                             <width>20</width>
@@ -25554,7 +25634,7 @@ padding-left: 5px;
                          </widget>
                         </item>
                         <item>
-                         <widget class="VCPSettingsLineEdit" name="y_tool_change_position">
+                         <widget class="VCPSettingsLineEdit" name="x_tool_change_position">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -25600,7 +25680,7 @@ padding-left: 5px;
                            <string>[]</string>
                           </property>
                           <property name="settingName" stdset="0">
-                           <string>tool-change-position.y-tool-change-position</string>
+                           <string>tool-change-position.x-tool-change-position</string>
                           </property>
                           <property name="textFormat" stdset="0">
                            <string>{:.4f}</string>
@@ -25724,7 +25804,7 @@ color: white;
                          <number>1</number>
                         </property>
                         <item>
-                         <widget class="QLabel" name="label_61">
+                         <widget class="QLabel" name="label_60">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -25752,7 +25832,7 @@ padding-left: 5px;
 }</string>
                           </property>
                           <property name="text">
-                           <string>Z</string>
+                           <string>Y</string>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -25760,7 +25840,7 @@ padding-left: 5px;
                          </widget>
                         </item>
                         <item>
-                         <widget class="QWidget" name="widget_75" native="true">
+                         <widget class="QWidget" name="widget_74" native="true">
                           <property name="minimumSize">
                            <size>
                             <width>20</width>
@@ -25776,7 +25856,7 @@ padding-left: 5px;
                          </widget>
                         </item>
                         <item>
-                         <widget class="VCPSettingsLineEdit" name="z_tool_change_position">
+                         <widget class="VCPSettingsLineEdit" name="y_tool_change_position">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -25822,7 +25902,7 @@ padding-left: 5px;
                            <string>[]</string>
                           </property>
                           <property name="settingName" stdset="0">
-                           <string>tool-change-position.z-tool-change-position</string>
+                           <string>tool-change-position.y-tool-change-position</string>
                           </property>
                           <property name="textFormat" stdset="0">
                            <string>{:.4f}</string>
@@ -25946,69 +26026,108 @@ color: white;
                          <number>1</number>
                         </property>
                         <item>
-                         <widget class="SubCallButton" name="set_g30_1_position">
+                         <widget class="QLabel" name="label_61">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                            <horstretch>1</horstretch>
+                           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                            <horstretch>0</horstretch>
                             <verstretch>0</verstretch>
                            </sizepolicy>
                           </property>
                           <property name="minimumSize">
                            <size>
-                            <width>185</width>
-                            <height>38</height>
+                            <width>23</width>
+                            <height>33</height>
                            </size>
                           </property>
                           <property name="maximumSize">
                            <size>
-                            <width>185</width>
-                            <height>38</height>
+                            <width>23</width>
+                            <height>33</height>
                            </size>
                           </property>
-                          <property name="focusPolicy">
-                           <enum>Qt::NoFocus</enum>
-                          </property>
                           <property name="styleSheet">
-                           <string notr="true">.SubCallButton {
-    color: white;
-    border-color: black;
-    border-style: solid;
-    border-radius: 5px;
-    border-width: 2px;
-    background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(213, 218, 216, 255), stop:0.169312 rgba(82, 82, 83, 255), stop:0.328042 rgba(72, 70, 73, 255), stop:0.492063 rgba(78, 77, 79, 255), stop:0.703704 rgba(72, 70, 73, 255), stop:0.86 rgba(82, 82, 83, 255), stop:1 rgba(213, 218, 216, 255));
-}
-
-.SubCallButton {
-    font-family: &quot;Bebas Kai&quot;;
-    font-size: 15pt;
-}
-
-.SubCallButton:disabled {
-    border-color: gray;
-}
-
-.SubCallButton:hover {
-    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #A19E9E, stop: 1.0 #5C5959);
-}
-
-.SubCallButton:pressed {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
-}
-
-.SubCallButton:checked[option=&quot;true&quot;] {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
-}
-
-.SubCallButton:checked {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
+                           <string notr="true">QLabel{
+font: 75 16pt &quot;Bebas Kai&quot;;
+color: rgb(255, 255, 255);
+padding-right: 1px;
+padding-left: 5px;
 }</string>
                           </property>
                           <property name="text">
-                           <string>SET TOOL TOUCH OFF POS</string>
+                           <string>Z</string>
                           </property>
-                          <property name="filename" stdset="0">
-                           <string>set_g30_position.ngc</string>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QWidget" name="widget_75" native="true">
+                          <property name="minimumSize">
+                           <size>
+                            <width>20</width>
+                            <height>0</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>20</width>
+                            <height>16777215</height>
+                           </size>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="VCPSettingsLineEdit" name="z_tool_change_position">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>110</width>
+                            <height>31</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>110</width>
+                            <height>31</height>
+                           </size>
+                          </property>
+                          <property name="focusPolicy">
+                           <enum>Qt::ClickFocus</enum>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">VCPSettingsLineEdit {
+    border-style: transparent;
+    border-color: rgb(235, 235, 235);
+    border-width: 1px;
+    border-radius: 5px;
+    color: black;
+    background: rgb(235, 235, 235);
+	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                          </property>
+                          <property name="readOnly">
+                           <bool>true</bool>
+                          </property>
+                          <property name="placeholderText">
+                           <string>0.0000</string>
+                          </property>
+                          <property name="rules" stdset="0">
+                           <string>[]</string>
+                          </property>
+                          <property name="settingName" stdset="0">
+                           <string>tool-change-position.z-tool-change-position</string>
+                          </property>
+                          <property name="textFormat" stdset="0">
+                           <string>{:.4f}</string>
                           </property>
                          </widget>
                         </item>
@@ -26128,6 +26247,73 @@ color: white;
                         <property name="bottomMargin">
                          <number>1</number>
                         </property>
+                        <item>
+                         <widget class="SubCallButton" name="set_g30_1_position">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                            <horstretch>1</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>185</width>
+                            <height>38</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>185</width>
+                            <height>38</height>
+                           </size>
+                          </property>
+                          <property name="focusPolicy">
+                           <enum>Qt::NoFocus</enum>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">.SubCallButton {
+    color: white;
+    border-color: black;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(213, 218, 216, 255), stop:0.169312 rgba(82, 82, 83, 255), stop:0.328042 rgba(72, 70, 73, 255), stop:0.492063 rgba(78, 77, 79, 255), stop:0.703704 rgba(72, 70, 73, 255), stop:0.86 rgba(82, 82, 83, 255), stop:1 rgba(213, 218, 216, 255));
+}
+
+.SubCallButton {
+    font-family: &quot;Bebas Kai&quot;;
+    font-size: 15pt;
+}
+
+.SubCallButton:disabled {
+    border-color: gray;
+}
+
+.SubCallButton:hover {
+    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                     stop: 0 #A19E9E, stop: 1.0 #5C5959);
+}
+
+.SubCallButton:pressed {
+    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
+}
+
+.SubCallButton:checked[option=&quot;true&quot;] {
+    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
+}
+
+.SubCallButton:checked {
+    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>SET TOOL TOUCH OFF POS</string>
+                          </property>
+                          <property name="filename" stdset="0">
+                           <string>set_g30_position.ngc</string>
+                          </property>
+                         </widget>
+                        </item>
                         <item>
                          <widget class="QWidget" name="widget_66" native="true"/>
                         </item>
@@ -30185,7 +30371,7 @@ color: black;
 padding: 20px;</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;IMPORTANT: PLEASE READ, &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic; text-decoration: underline;&quot;&gt;ACTION REQUIRED!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic; text-decoration: underline; color:#170cd9;&quot;&gt;Develop Branch has now become Stable Branch! &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Droid Sans Mono','monospace','monospace'; font-size:14px; color:#000000;&quot;&gt;Probe Basic has moved to a stable and development apt version. This is to give users the ability to try and test the latest working branch of Probe Basic easily via changing the apt source list file. If you are seeing this message, you were already on the develop version, or were on the Stable version and now will need to make some changes to your configuration files. The changes are required and will need to be done before using the interface succesfully. you can follow the guide linked below to accomplish these changes. important note, all the files shown being copied over are required, do not reuse the old version of those files as they will no longer work and cause errors.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Droid Sans Mono','monospace','monospace'; font-size:14px; font-weight:600; color:#000000;&quot;&gt;**Notes:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Droid Sans Mono','monospace','monospace'; font-size:14px; color:#000000;&quot;&gt;see machine config doc for new ini line needed for &amp;quot;user_buttons&amp;quot; and copy over the user_buttons folder from sim into your machine config. this allows users to edit the buttons in the main bottom window left side under the cycle start to adjust for their own use case and machine type. these edits can be done by running editvcp in terminal and navigating to the user_buttons folder and selecting the template_user_buttons.ui file. the changes will remain in the config folder and will not be overwritten on updates.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;For Instructions on changing your config documents, please visit the following url and follow the instructions:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://kcjengr.github.io/probe_basic/machine_config.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://kcjengr.github.io/probe_basic/machine_config.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;If on Develop version you may wish to lock in this new stable release by changing the apt source list to stable, this can be done following the instruction link below:&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://kcjengr.github.io/probe_basic/stable_develop_branch_change.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://kcjengr.github.io/probe_basic/stable_develop_branch_change.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;IMPORTANT: PLEASE READ, &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic; text-decoration: underline;&quot;&gt;ACTION REQUIRED!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic; text-decoration: underline; color:#170cd9;&quot;&gt;1/5/2025 Develop Branch has now become Stable Branch! &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Droid Sans Mono','monospace','monospace'; font-size:14px; color:#000000;&quot;&gt;Probe Basic has moved to a stable and development apt version. This is to give users the ability to try and test the latest working branch of Probe Basic easily via changing the apt source list file. If you are seeing this message, you were already on the develop version, or were on the Stable version and now will need to make some changes to your configuration files. The changes are required and will need to be done before using the interface succesfully. you can follow the guide linked below to accomplish these changes. important note, all the files shown being copied over are required, do not reuse the old version of those files as they will no longer work and cause errors.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Droid Sans Mono','monospace','monospace'; font-size:14px; font-weight:600; color:#000000;&quot;&gt;**Notes:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Droid Sans Mono','monospace','monospace'; font-size:14px; color:#000000;&quot;&gt;see machine config doc for new ini line needed for &amp;quot;user_buttons&amp;quot; and copy over the user_buttons folder from sim into your machine config. this allows users to edit the buttons in the main bottom window left side under the cycle start to adjust for their own use case and machine type. these edits can be done by running editvcp in terminal and navigating to the user_buttons folder and selecting the template_user_buttons.ui file. the changes will remain in the config folder and will not be overwritten on updates.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Droid Sans Mono','monospace','monospace'; font-size:14px; color:#000000;&quot;&gt;A new subroutine has been added for probing the spindle zero height, be sure to copy it over and check for any other changes in subroutines to your existing config's sub files.  meld is a great program for comparing folders and files content!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;For Instructions on changing your config documents, please visit the following url and follow the instructions:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://kcjengr.github.io/probe_basic/machine_config.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://kcjengr.github.io/probe_basic/machine_config.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;If on Develop version you may wish to lock in this new stable release by changing the apt source list to stable, this can be done following the instruction link below:&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://kcjengr.github.io/probe_basic/stable_develop_branch_change.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://kcjengr.github.io/probe_basic/stable_develop_branch_change.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                  <property name="textFormat">
                   <enum>Qt::AutoText</enum>
@@ -38066,7 +38252,7 @@ QLabel[style=&quot;homing&quot;]{
 ]</string>
                  </property>
                  <property name="MDICommand" stdset="0">
-                  <string>G10 L2 P{ch[0]} A0.0</string>
+                  <string>G10 L20 P{ch[0]} A0.0</string>
                  </property>
                 </widget>
                </item>
@@ -44023,6 +44209,16 @@ font: 11pt bebas kai;
    <container>1</container>
   </customwidget>
   <customwidget>
+   <class>DBCheckBoxField</class>
+   <extends>QWidget</extends>
+   <header>qtpyvcp.widgets.db_widgets.tool_fields</header>
+  </customwidget>
+  <customwidget>
+   <class>DBIntField</class>
+   <extends>QWidget</extends>
+   <header>qtpyvcp.widgets.db_widgets.tool_fields</header>
+  </customwidget>
+  <customwidget>
    <class>DynATC</class>
    <extends>QQuickWidget</extends>
    <header>widgets.atc_widget.atc</header>
@@ -44156,8 +44352,8 @@ font: 11pt bebas kai;
    <slot>runSelection()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>212</x>
-     <y>606</y>
+     <x>93</x>
+     <y>122</y>
     </hint>
     <hint type="destinationlabel">
      <x>259</x>
@@ -44188,8 +44384,8 @@ font: 11pt bebas kai;
    <slot>removeAll()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>159</x>
-     <y>545</y>
+     <x>92</x>
+     <y>112</y>
     </hint>
     <hint type="destinationlabel">
      <x>143</x>
@@ -44204,8 +44400,8 @@ font: 11pt bebas kai;
    <slot>removeSelectedItem()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>89</x>
-     <y>545</y>
+     <x>83</x>
+     <y>112</y>
     </hint>
     <hint type="destinationlabel">
      <x>114</x>
@@ -44230,30 +44426,14 @@ font: 11pt bebas kai;
    </hints>
   </connection>
   <connection>
-   <sender>tool_table_delete_button</sender>
-   <signal>clicked()</signal>
-   <receiver>tool_table</receiver>
-   <slot>deleteSelectedTool()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>270</x>
-     <y>640</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>130</x>
-     <y>96</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>btn_run_from_line_mdi</sender>
    <signal>clicked()</signal>
    <receiver>mdihistory</receiver>
    <slot>runFromSelection()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>111</x>
-     <y>606</y>
+     <x>83</x>
+     <y>122</y>
     </hint>
     <hint type="destinationlabel">
      <x>163</x>
@@ -44288,8 +44468,8 @@ font: 11pt bebas kai;
      <y>664</y>
     </hint>
     <hint type="destinationlabel">
-     <x>122</x>
-     <y>664</y>
+     <x>136</x>
+     <y>663</y>
     </hint>
    </hints>
   </connection>
@@ -44390,22 +44570,6 @@ font: 11pt bebas kai;
    </hints>
   </connection>
   <connection>
-   <sender>tool_table_save_button</sender>
-   <signal>clicked()</signal>
-   <receiver>tool_table</receiver>
-   <slot>saveToolTable()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>722</x>
-     <y>640</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>130</x>
-     <y>96</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>clear_button</sender>
    <signal>clicked()</signal>
    <receiver>vtk</receiver>
@@ -44460,12 +44624,12 @@ font: 11pt bebas kai;
    <slot>moveRowItemUp()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>385</x>
-     <y>545</y>
+     <x>121</x>
+     <y>112</y>
     </hint>
     <hint type="destinationlabel">
-     <x>379</x>
-     <y>75</y>
+     <x>385</x>
+     <y>52</y>
     </hint>
    </hints>
   </connection>
@@ -44476,12 +44640,12 @@ font: 11pt bebas kai;
    <slot>submit()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>670</x>
-     <y>602</y>
+     <x>109</x>
+     <y>140</y>
     </hint>
     <hint type="destinationlabel">
-     <x>379</x>
-     <y>75</y>
+     <x>385</x>
+     <y>52</y>
     </hint>
    </hints>
   </connection>
@@ -44492,8 +44656,8 @@ font: 11pt bebas kai;
    <slot>toggleQueue(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>311</x>
-     <y>545</y>
+     <x>108</x>
+     <y>112</y>
     </hint>
     <hint type="destinationlabel">
      <x>306</x>
@@ -44508,8 +44672,8 @@ font: 11pt bebas kai;
    <slot>clearQueue()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>235</x>
-     <y>545</y>
+     <x>100</x>
+     <y>112</y>
     </hint>
     <hint type="destinationlabel">
      <x>238</x>
@@ -44556,12 +44720,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>122</x>
-     <y>664</y>
+     <x>136</x>
+     <y>663</y>
     </hint>
     <hint type="destinationlabel">
-     <x>670</x>
-     <y>602</y>
+     <x>109</x>
+     <y>140</y>
     </hint>
    </hints>
   </connection>
@@ -44604,12 +44768,12 @@ font: 11pt bebas kai;
    <slot>moveRowItemDown()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>385</x>
-     <y>606</y>
+     <x>117</x>
+     <y>122</y>
     </hint>
     <hint type="destinationlabel">
-     <x>379</x>
-     <y>75</y>
+     <x>385</x>
+     <y>52</y>
     </hint>
    </hints>
   </connection>
@@ -44630,50 +44794,18 @@ font: 11pt bebas kai;
    </hints>
   </connection>
   <connection>
-   <sender>tool_table_add_tool_button</sender>
-   <signal>clicked()</signal>
-   <receiver>tool_table</receiver>
-   <slot>addTool()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>496</x>
-     <y>640</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>130</x>
-     <y>96</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>btn_copy_to_editor_mdi</sender>
    <signal>clicked()</signal>
    <receiver>mdihistory</receiver>
    <slot>copySelectionToGcodeEditor()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>311</x>
-     <y>606</y>
+     <x>103</x>
+     <y>122</y>
     </hint>
     <hint type="destinationlabel">
      <x>320</x>
      <y>52</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>tool_table_reload_button</sender>
-   <signal>clicked()</signal>
-   <receiver>tool_table</receiver>
-   <slot>loadToolTable()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>948</x>
-     <y>640</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>130</x>
-     <y>96</y>
     </hint>
    </hints>
   </connection>
@@ -45462,22 +45594,6 @@ font: 11pt bebas kai;
    </hints>
   </connection>
   <connection>
-   <sender>load_spindle_tool_number_2</sender>
-   <signal>returnPressed()</signal>
-   <receiver>load_spindle_button_2</receiver>
-   <slot>click()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>1486</x>
-     <y>267</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>1615</x>
-     <y>268</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>filesystemtable</sender>
    <signal>rootChanged(QString)</signal>
    <receiver>facingwidget</receiver>
@@ -45846,6 +45962,70 @@ font: 11pt bebas kai;
    </hints>
   </connection>
   <connection>
+   <sender>tool_table_add_tool_button</sender>
+   <signal>clicked()</signal>
+   <receiver>tool_table</receiver>
+   <slot>addTool()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>420</x>
+     <y>640</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>130</x>
+     <y>96</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tool_table_reload_button</sender>
+   <signal>clicked()</signal>
+   <receiver>tool_table</receiver>
+   <slot>loadToolTable()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>796</x>
+     <y>640</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>130</x>
+     <y>96</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tool_table_delete_button</sender>
+   <signal>clicked()</signal>
+   <receiver>tool_table</receiver>
+   <slot>deleteSelectedTool()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>232</x>
+     <y>640</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>130</x>
+     <y>96</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tool_table_save_button</sender>
+   <signal>clicked()</signal>
+   <receiver>tool_table</receiver>
+   <slot>saveToolTable()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>608</x>
+     <y>640</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>130</x>
+     <y>96</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
    <sender>tool_number_entry_tool_page</sender>
    <signal>returnPressed()</signal>
    <receiver>m6_tool_call_button_tool_page</receiver>
@@ -45858,6 +46038,86 @@ font: 11pt bebas kai;
     <hint type="destinationlabel">
      <x>1522</x>
      <y>367</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>load_spindle_tool_number_2</sender>
+   <signal>returnPressed()</signal>
+   <receiver>load_spindle_button_2</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1486</x>
+     <y>267</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1615</x>
+     <y>268</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tool_table</sender>
+   <signal>toolSelected(int)</signal>
+   <receiver>dbintfield</receiver>
+   <slot>toolSelected(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>792</x>
+     <y>197</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>822</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tool_table</sender>
+   <signal>toolSelected(int)</signal>
+   <receiver>dbcheckboxfield</receiver>
+   <slot>toolSelected(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>783</x>
+     <y>305</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>927</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>db_property_update_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>dbcheckboxfield</receiver>
+   <slot>saveField()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>902</x>
+     <y>619</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>954</x>
+     <y>180</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>db_property_update_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>dbintfield</receiver>
+   <slot>saveField()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>919</x>
+     <y>621</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>912</x>
+     <y>156</y>
     </hint>
    </hints>
   </connection>
@@ -45880,18 +46140,18 @@ font: 11pt bebas kai;
   </property>
  </designerdata>
  <buttongroups>
+  <buttongroup name="proberoutinebtnGroup"/>
+  <buttongroup name="probehelpGroup"/>
+  <buttongroup name="probetabGroup"/>
+  <buttongroup name="xycalbtnGroup"/>
+  <buttongroup name="settertabGroup"/>
+  <buttongroup name="sidebartabGroup"/>
+  <buttongroup name="btngrpMdi"/>
   <buttongroup name="probepagewcsbtnGroup"/>
+  <buttongroup name="mainorthoperspbtnGroup"/>
+  <buttongroup name="spindlerpmsourcebtnGroup"/>
   <buttongroup name="gcodemdibtnGroup"/>
   <buttongroup name="tooloffsetdirbtnGroup"/>
-  <buttongroup name="btngrpMdi"/>
-  <buttongroup name="spindlerpmsourcebtnGroup"/>
   <buttongroup name="customwcsbtnGroup"/>
-  <buttongroup name="sidebartabGroup"/>
-  <buttongroup name="xycalbtnGroup"/>
-  <buttongroup name="proberoutinebtnGroup"/>
-  <buttongroup name="settertabGroup"/>
-  <buttongroup name="probetabGroup"/>
-  <buttongroup name="probehelpGroup"/>
-  <buttongroup name="mainorthoperspbtnGroup"/>
  </buttongroups>
 </ui>
