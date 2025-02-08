@@ -9,8 +9,8 @@ Probe Basic .deb Install
 Important Requirements
 ----------------------
 
+    - The Deb file install in this doc page is intended for AMD64 pc installs only, do not try to use for arm64/pi installs.
     - Probe Basic is currently designed for 1920x1080 screen sizes only!
-    - Probe Basic Install by apt is for amd64 only currently!
     - Probe Basic requires graphics hardware that supports OpenGL 3.2 and OpenGL Shading Language (GLSL) 1.50 or later
     - Probe Basic is tested on xfce4, during install of Debian 12 ISO:
     - DO NOT enter a Root password during installation, leave blank and skip this page.
@@ -63,21 +63,34 @@ Installing Probe Basic
     - QtPyVCP
     - hiyapyco
 
-    If you haven't installed LinuxCNC, use the following command:
+  
+  Download and Install linuxcnc from deb file:
+  
+    https://www.linuxcnc.org/dists/bookworm/2.9-uspace/binary-amd64/linuxcnc-uspace_2.9.3_amd64.deb
 
-    .. code-block:: bash
 
-        sudo apt install linuxcnc-uspace linuxcnc-uspace-dev mesaflash
 
-    After installation, open LinuxCNC and start the axis sim briefly to ensure successful installation.
+   In a terminal, enter the following lines one at a time and press enter after each:
 
+      .. code-block:: bash
+
+         cd ~
+         
+         cd Downloads
+         
+         sudo dpkg -i linuxcnc-uspace_2.9.3_amd64.deb
+
+
+    Once you have installed LinuxCNC, open it and start the axis sim briefly and then shut it down to ensure the installation was successful.
+
+    
     Download the following files:
 
     .. parsed-literal::
         
-        |probe_basic_deb_link|
+        |probe_basic_amd64_deb_link|
         
-        |qtpyvcp_deb_link|
+        |qtpyvcp_amd64_deb_link|
         
         https://repository.qtpyvcp.com/repo/hiyapyco/python3-hiyapyco_0.5.1-1_all.deb
 
@@ -97,11 +110,11 @@ Installation Commands
 
     .. parsed-literal::
 
-        sudo dpkg -i |qtpyvcp_deb|
+        sudo dpkg -i |qtpyvcp_amd64_deb|
 
     .. parsed-literal::
 
-        sudo dpkg -i |probe_basic_deb|
+        sudo dpkg -i |probe_basic_amd64_deb|
 
     You should now be able to launch the Probe Basic sim from within the LinuxCNC applications dropdown menu.
 

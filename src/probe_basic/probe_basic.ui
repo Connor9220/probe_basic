@@ -4254,44 +4254,7 @@ QPushButton:checked {
                      <enum>Qt::NoFocus</enum>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true">QPushButton {
-    color: white;
-    border-color: rgb(74, 77, 81);
-    border-style: solid;
-    border-radius: 5px;
-    border-width: 2px;
-    background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(213, 218, 216, 255), stop:0.169312 rgba(82, 82, 83, 255), stop:0.328042 rgba(72, 70, 73, 255), stop:0.492063 rgba(78, 77, 79, 255), stop:0.703704 rgba(72, 70, 73, 255), stop:0.86 rgba(82, 82, 83, 255), stop:1 rgba(213, 218, 216, 255));
-}
-
-QPushButton {
-    font-family: &quot;Bebas Kai&quot;;
-    font-size: 15pt;
-}
-
-QPushButton:disabled {
-    border-color: gray;
-}
-
-/*QPushButton[error=&quot;true&quot;] {
-    border-color: red;
-}*/
-
-QPushButton:hover {
-    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #A19E9E, stop: 1.0 #5C5959);
-}
-
-QPushButton:pressed {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
-}
-
-QPushButton:checked[option=&quot;true&quot;] {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
-}
-
-QPushButton:checked {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
-}</string>
+                     <string notr="true"/>
                     </property>
                     <property name="text">
                      <string>PAN</string>
@@ -8673,6 +8636,9 @@ QPushButton:checked {
                        <bold>false</bold>
                       </font>
                      </property>
+                     <property name="tabletTracking">
+                      <bool>false</bool>
+                     </property>
                      <property name="focusPolicy">
                       <enum>Qt::NoFocus</enum>
                      </property>
@@ -8708,9 +8674,16 @@ QPushButton:checked {
                      </property>
                      <property name="currentToolColor" stdset="0">
                       <color>
-                       <red>42</red>
-                       <green>56</green>
+                       <red>255</red>
+                       <green>255</green>
                        <blue>255</blue>
+                      </color>
+                     </property>
+                     <property name="currentToolBackground" stdset="0">
+                      <color>
+                       <red>93</red>
+                       <green>95</green>
+                       <blue>239</blue>
                       </color>
                      </property>
                      <property name="displayColumns" stdset="0">
@@ -10436,9 +10409,16 @@ QPushButton:checked {
                      </property>
                      <property name="currentRowColor" stdset="0">
                       <color>
-                       <red>0</red>
-                       <green>38</green>
+                       <red>255</red>
+                       <green>255</green>
                        <blue>255</blue>
+                      </color>
+                     </property>
+                     <property name="currentRowBackground" stdset="0">
+                      <color>
+                       <red>93</red>
+                       <green>95</green>
+                       <blue>239</blue>
                       </color>
                      </property>
                      <property name="displayColumns" stdset="0">
@@ -25152,7 +25132,7 @@ background: transparent;
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_48">
                    <property name="spacing">
-                    <number>6</number>
+                    <number>5</number>
                    </property>
                    <property name="leftMargin">
                     <number>9</number>
@@ -25245,7 +25225,7 @@ background: transparent;
                      </property>
                      <layout class="QVBoxLayout" name="verticalLayout_72">
                       <property name="spacing">
-                       <number>6</number>
+                       <number>3</number>
                       </property>
                       <property name="leftMargin">
                        <number>0</number>
@@ -25257,7 +25237,7 @@ background: transparent;
                        <number>0</number>
                       </property>
                       <property name="bottomMargin">
-                       <number>0</number>
+                       <number>10</number>
                       </property>
                       <item>
                        <layout class="QHBoxLayout" name="horizontalLayout_179">
@@ -25277,7 +25257,7 @@ background: transparent;
                          <number>1</number>
                         </property>
                         <item>
-                         <widget class="QLabel" name="label_59">
+                         <widget class="SubCallButton" name="probe_spindle_nose_subcallbutton">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -25286,99 +25266,21 @@ background: transparent;
                           </property>
                           <property name="minimumSize">
                            <size>
-                            <width>23</width>
-                            <height>33</height>
+                            <width>250</width>
+                            <height>38</height>
                            </size>
                           </property>
                           <property name="maximumSize">
                            <size>
-                            <width>23</width>
-                            <height>33</height>
+                            <width>250</width>
+                            <height>38</height>
                            </size>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QLabel{
-font: 75 16pt &quot;Bebas Kai&quot;;
-color: rgb(255, 255, 255);
-padding-right: 1px;
-padding-left: 5px;
-}</string>
                           </property>
                           <property name="text">
-                           <string>X</string>
+                           <string>PROBE SPINDLE NOSE ZERO</string>
                           </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QWidget" name="widget_72" native="true">
-                          <property name="minimumSize">
-                           <size>
-                            <width>20</width>
-                            <height>0</height>
-                           </size>
-                          </property>
-                          <property name="maximumSize">
-                           <size>
-                            <width>20</width>
-                            <height>16777215</height>
-                           </size>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="VCPSettingsLineEdit" name="x_tool_change_position">
-                          <property name="sizePolicy">
-                           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                           </sizepolicy>
-                          </property>
-                          <property name="minimumSize">
-                           <size>
-                            <width>110</width>
-                            <height>31</height>
-                           </size>
-                          </property>
-                          <property name="maximumSize">
-                           <size>
-                            <width>110</width>
-                            <height>31</height>
-                           </size>
-                          </property>
-                          <property name="focusPolicy">
-                           <enum>Qt::ClickFocus</enum>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">VCPSettingsLineEdit {
-    border-style: transparent;
-    border-color: rgb(235, 235, 235);
-    border-width: 1px;
-    border-radius: 5px;
-    color: black;
-    background: rgb(235, 235, 235);
-	font: 15pt &quot;Bebas Kai&quot;;
-}</string>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                          </property>
-                          <property name="readOnly">
-                           <bool>true</bool>
-                          </property>
-                          <property name="placeholderText">
-                           <string>0.0000</string>
-                          </property>
-                          <property name="rules" stdset="0">
-                           <string>[]</string>
-                          </property>
-                          <property name="settingName" stdset="0">
-                           <string>tool-change-position.x-tool-change-position</string>
-                          </property>
-                          <property name="textFormat" stdset="0">
-                           <string>{:.4f}</string>
+                          <property name="filename" stdset="0">
+                           <string>probe_spindle_nose.ngc</string>
                           </property>
                          </widget>
                         </item>
@@ -25502,7 +25404,7 @@ color: white;
                          <number>1</number>
                         </property>
                         <item>
-                         <widget class="QLabel" name="label_60">
+                         <widget class="QLabel" name="label_59">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -25530,7 +25432,7 @@ padding-left: 5px;
 }</string>
                           </property>
                           <property name="text">
-                           <string>Y</string>
+                           <string>X</string>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -25538,7 +25440,7 @@ padding-left: 5px;
                          </widget>
                         </item>
                         <item>
-                         <widget class="QWidget" name="widget_74" native="true">
+                         <widget class="QWidget" name="widget_72" native="true">
                           <property name="minimumSize">
                            <size>
                             <width>20</width>
@@ -25554,7 +25456,7 @@ padding-left: 5px;
                          </widget>
                         </item>
                         <item>
-                         <widget class="VCPSettingsLineEdit" name="y_tool_change_position">
+                         <widget class="VCPSettingsLineEdit" name="x_tool_change_position">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -25600,7 +25502,7 @@ padding-left: 5px;
                            <string>[]</string>
                           </property>
                           <property name="settingName" stdset="0">
-                           <string>tool-change-position.y-tool-change-position</string>
+                           <string>tool-change-position.x-tool-change-position</string>
                           </property>
                           <property name="textFormat" stdset="0">
                            <string>{:.4f}</string>
@@ -25724,7 +25626,7 @@ color: white;
                          <number>1</number>
                         </property>
                         <item>
-                         <widget class="QLabel" name="label_61">
+                         <widget class="QLabel" name="label_60">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -25752,7 +25654,7 @@ padding-left: 5px;
 }</string>
                           </property>
                           <property name="text">
-                           <string>Z</string>
+                           <string>Y</string>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -25760,7 +25662,7 @@ padding-left: 5px;
                          </widget>
                         </item>
                         <item>
-                         <widget class="QWidget" name="widget_75" native="true">
+                         <widget class="QWidget" name="widget_74" native="true">
                           <property name="minimumSize">
                            <size>
                             <width>20</width>
@@ -25776,7 +25678,7 @@ padding-left: 5px;
                          </widget>
                         </item>
                         <item>
-                         <widget class="VCPSettingsLineEdit" name="z_tool_change_position">
+                         <widget class="VCPSettingsLineEdit" name="y_tool_change_position">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -25822,7 +25724,7 @@ padding-left: 5px;
                            <string>[]</string>
                           </property>
                           <property name="settingName" stdset="0">
-                           <string>tool-change-position.z-tool-change-position</string>
+                           <string>tool-change-position.y-tool-change-position</string>
                           </property>
                           <property name="textFormat" stdset="0">
                            <string>{:.4f}</string>
@@ -25946,69 +25848,108 @@ color: white;
                          <number>1</number>
                         </property>
                         <item>
-                         <widget class="SubCallButton" name="set_g30_1_position">
+                         <widget class="QLabel" name="label_61">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                            <horstretch>1</horstretch>
+                           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                            <horstretch>0</horstretch>
                             <verstretch>0</verstretch>
                            </sizepolicy>
                           </property>
                           <property name="minimumSize">
                            <size>
-                            <width>185</width>
-                            <height>38</height>
+                            <width>23</width>
+                            <height>33</height>
                            </size>
                           </property>
                           <property name="maximumSize">
                            <size>
-                            <width>185</width>
-                            <height>38</height>
+                            <width>23</width>
+                            <height>33</height>
                            </size>
                           </property>
-                          <property name="focusPolicy">
-                           <enum>Qt::NoFocus</enum>
-                          </property>
                           <property name="styleSheet">
-                           <string notr="true">.SubCallButton {
-    color: white;
-    border-color: black;
-    border-style: solid;
-    border-radius: 5px;
-    border-width: 2px;
-    background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(213, 218, 216, 255), stop:0.169312 rgba(82, 82, 83, 255), stop:0.328042 rgba(72, 70, 73, 255), stop:0.492063 rgba(78, 77, 79, 255), stop:0.703704 rgba(72, 70, 73, 255), stop:0.86 rgba(82, 82, 83, 255), stop:1 rgba(213, 218, 216, 255));
-}
-
-.SubCallButton {
-    font-family: &quot;Bebas Kai&quot;;
-    font-size: 15pt;
-}
-
-.SubCallButton:disabled {
-    border-color: gray;
-}
-
-.SubCallButton:hover {
-    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #A19E9E, stop: 1.0 #5C5959);
-}
-
-.SubCallButton:pressed {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
-}
-
-.SubCallButton:checked[option=&quot;true&quot;] {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
-}
-
-.SubCallButton:checked {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
+                           <string notr="true">QLabel{
+font: 75 16pt &quot;Bebas Kai&quot;;
+color: rgb(255, 255, 255);
+padding-right: 1px;
+padding-left: 5px;
 }</string>
                           </property>
                           <property name="text">
-                           <string>SET TOOL TOUCH OFF POS</string>
+                           <string>Z</string>
                           </property>
-                          <property name="filename" stdset="0">
-                           <string>set_g30_position.ngc</string>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QWidget" name="widget_75" native="true">
+                          <property name="minimumSize">
+                           <size>
+                            <width>20</width>
+                            <height>0</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>20</width>
+                            <height>16777215</height>
+                           </size>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="VCPSettingsLineEdit" name="z_tool_change_position">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>110</width>
+                            <height>31</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>110</width>
+                            <height>31</height>
+                           </size>
+                          </property>
+                          <property name="focusPolicy">
+                           <enum>Qt::ClickFocus</enum>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">VCPSettingsLineEdit {
+    border-style: transparent;
+    border-color: rgb(235, 235, 235);
+    border-width: 1px;
+    border-radius: 5px;
+    color: black;
+    background: rgb(235, 235, 235);
+	font: 15pt &quot;Bebas Kai&quot;;
+}</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                          </property>
+                          <property name="readOnly">
+                           <bool>true</bool>
+                          </property>
+                          <property name="placeholderText">
+                           <string>0.0000</string>
+                          </property>
+                          <property name="rules" stdset="0">
+                           <string>[]</string>
+                          </property>
+                          <property name="settingName" stdset="0">
+                           <string>tool-change-position.z-tool-change-position</string>
+                          </property>
+                          <property name="textFormat" stdset="0">
+                           <string>{:.4f}</string>
                           </property>
                          </widget>
                         </item>
@@ -26128,6 +26069,73 @@ color: white;
                         <property name="bottomMargin">
                          <number>1</number>
                         </property>
+                        <item>
+                         <widget class="SubCallButton" name="set_g30_1_position">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                            <horstretch>1</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>185</width>
+                            <height>38</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>185</width>
+                            <height>38</height>
+                           </size>
+                          </property>
+                          <property name="focusPolicy">
+                           <enum>Qt::NoFocus</enum>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">.SubCallButton {
+    color: white;
+    border-color: black;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(213, 218, 216, 255), stop:0.169312 rgba(82, 82, 83, 255), stop:0.328042 rgba(72, 70, 73, 255), stop:0.492063 rgba(78, 77, 79, 255), stop:0.703704 rgba(72, 70, 73, 255), stop:0.86 rgba(82, 82, 83, 255), stop:1 rgba(213, 218, 216, 255));
+}
+
+.SubCallButton {
+    font-family: &quot;Bebas Kai&quot;;
+    font-size: 15pt;
+}
+
+.SubCallButton:disabled {
+    border-color: gray;
+}
+
+.SubCallButton:hover {
+    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                     stop: 0 #A19E9E, stop: 1.0 #5C5959);
+}
+
+.SubCallButton:pressed {
+    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
+}
+
+.SubCallButton:checked[option=&quot;true&quot;] {
+    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
+}
+
+.SubCallButton:checked {
+    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>SET TOOL TOUCH OFF POS</string>
+                          </property>
+                          <property name="filename" stdset="0">
+                           <string>set_g30_position.ngc</string>
+                          </property>
+                         </widget>
+                        </item>
                         <item>
                          <widget class="QWidget" name="widget_66" native="true"/>
                         </item>
@@ -26590,7 +26598,7 @@ color: white;
                        </layout>
                       </item>
                       <item>
-                       <layout class="QHBoxLayout" name="horizontalLayout_189">
+                       <layout class="QHBoxLayout" name="horizontalLayout_196">
                         <property name="spacing">
                          <number>12</number>
                         </property>
@@ -26607,7 +26615,7 @@ color: white;
                          <number>1</number>
                         </property>
                         <item>
-                         <widget class="QLabel" name="label_137">
+                         <widget class="QLabel" name="label_153">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>1</horstretch>
@@ -26630,6 +26638,7 @@ color: white;
                            <string notr="true">QLabel{
 font: 15pt &quot;Bebas Kai&quot;;
 color: white;
+padding-left: 12px;
 }</string>
                           </property>
                           <property name="lineWidth">
@@ -26643,6 +26652,138 @@ color: white;
                           </property>
                           <property name="indent">
                            <number>0</number>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="label_150">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>150</width>
+                            <height>38</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>100</width>
+                            <height>38</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QLabel{
+font: 15pt &quot;Bebas Kai&quot;;
+color: white;
+}</string>
+                          </property>
+                          <property name="lineWidth">
+                           <number>0</number>
+                          </property>
+                          <property name="text">
+                           <string>Breakage Tolerance</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                          </property>
+                          <property name="indent">
+                           <number>0</number>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="VCPSettingsLineEdit" name="breakage_tolerance_3037">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>100</width>
+                            <height>31</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>100</width>
+                            <height>31</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>bebas kai</family>
+                            <pointsize>15</pointsize>
+                            <weight>50</weight>
+                            <italic>false</italic>
+                            <bold>false</bold>
+                           </font>
+                          </property>
+                          <property name="focusPolicy">
+                           <enum>Qt::ClickFocus</enum>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">VCPSettingsLineEdit {
+    font: 15pt &quot;bebas kai&quot;
+}</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                          </property>
+                          <property name="placeholderText">
+                           <string>0.0000</string>
+                          </property>
+                          <property name="rules" stdset="0">
+                           <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;True if ch[0] else False&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
+                          </property>
+                          <property name="settingName" stdset="0">
+                           <string>tool-setter-probe.breakage-tolerance</string>
+                          </property>
+                          <property name="textFormat" stdset="0">
+                           <string>{:.4f}</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_189">
+                        <property name="spacing">
+                         <number>12</number>
+                        </property>
+                        <property name="leftMargin">
+                         <number>6</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>1</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>6</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>1</number>
+                        </property>
+                        <item>
+                         <widget class="QWidget" name="widget_79" native="true">
+                          <property name="enabled">
+                           <bool>false</bool>
+                          </property>
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                            <horstretch>2</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>65</width>
+                            <height>0</height>
+                           </size>
                           </property>
                          </widget>
                         </item>
@@ -26703,22 +26844,122 @@ color: white;
                          </widget>
                         </item>
                         <item>
-                         <widget class="QWidget" name="widget_79" native="true">
+                         <widget class="QWidget" name="widget_82" native="true">
                           <property name="enabled">
                            <bool>false</bool>
                           </property>
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                            <horstretch>1</horstretch>
+                            <horstretch>2</horstretch>
                             <verstretch>0</verstretch>
                            </sizepolicy>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>50</width>
+                            <height>0</height>
+                           </size>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLabel" name="label_8">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>100</width>
+                            <height>38</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>100</width>
+                            <height>38</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QLabel{
+font: 15pt &quot;Bebas Kai&quot;;
+color: white;
+}</string>
+                          </property>
+                          <property name="lineWidth">
+                           <number>0</number>
+                          </property>
+                          <property name="text">
+                           <string>USER SETTER 1</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                          </property>
+                          <property name="indent">
+                           <number>0</number>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="VCPSettingsLineEdit" name="user_setter_1_3038">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>100</width>
+                            <height>31</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>100</width>
+                            <height>31</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>bebas kai</family>
+                            <pointsize>15</pointsize>
+                            <weight>50</weight>
+                            <italic>false</italic>
+                            <bold>false</bold>
+                           </font>
+                          </property>
+                          <property name="focusPolicy">
+                           <enum>Qt::ClickFocus</enum>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">VCPSettingsLineEdit {
+    font: 15pt &quot;bebas kai&quot;
+}</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                          </property>
+                          <property name="placeholderText">
+                           <string>0.0000</string>
+                          </property>
+                          <property name="rules" stdset="0">
+                           <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;True if ch[0] else False&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
+                          </property>
+                          <property name="settingName" stdset="0">
+                           <string>tool-setter-probe.user-setter-1</string>
+                          </property>
+                          <property name="textFormat" stdset="0">
+                           <string>{:.4f}</string>
                           </property>
                          </widget>
                         </item>
                        </layout>
                       </item>
                       <item>
-                       <layout class="QHBoxLayout" name="horizontalLayout_186" stretch="0,0,0,0,0">
+                       <layout class="QHBoxLayout" name="horizontalLayout_186" stretch="0,0,0,0,0,0">
                         <property name="spacing">
                          <number>12</number>
                         </property>
@@ -26734,19 +26975,6 @@ color: white;
                         <property name="bottomMargin">
                          <number>1</number>
                         </property>
-                        <item>
-                         <widget class="QWidget" name="widget_84" native="true">
-                          <property name="enabled">
-                           <bool>false</bool>
-                          </property>
-                          <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                            <horstretch>1</horstretch>
-                            <verstretch>0</verstretch>
-                           </sizepolicy>
-                          </property>
-                         </widget>
-                        </item>
                         <item>
                          <widget class="VCPSettingsPushButton" name="tool_setter_offset_left_Btn">
                           <property name="enabled">
@@ -26909,6 +27137,100 @@ color: white;
                           </property>
                          </widget>
                         </item>
+                        <item>
+                         <widget class="QLabel" name="label_155">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>100</width>
+                            <height>38</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>100</width>
+                            <height>38</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QLabel{
+font: 15pt &quot;Bebas Kai&quot;;
+color: white;
+}</string>
+                          </property>
+                          <property name="lineWidth">
+                           <number>0</number>
+                          </property>
+                          <property name="text">
+                           <string>USER SETTER 2</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                          </property>
+                          <property name="indent">
+                           <number>0</number>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="VCPSettingsLineEdit" name="user_setter_2_3039">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>100</width>
+                            <height>31</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>100</width>
+                            <height>31</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>bebas kai</family>
+                            <pointsize>15</pointsize>
+                            <weight>50</weight>
+                            <italic>false</italic>
+                            <bold>false</bold>
+                           </font>
+                          </property>
+                          <property name="focusPolicy">
+                           <enum>Qt::ClickFocus</enum>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">VCPSettingsLineEdit {
+    font: 15pt &quot;bebas kai&quot;
+}</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                          </property>
+                          <property name="placeholderText">
+                           <string>0.0000</string>
+                          </property>
+                          <property name="rules" stdset="0">
+                           <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;True if ch[0] else False&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
+                          </property>
+                          <property name="settingName" stdset="0">
+                           <string>tool-setter-probe.user-setter-2</string>
+                          </property>
+                          <property name="textFormat" stdset="0">
+                           <string>{:.4f}</string>
+                          </property>
+                         </widget>
+                        </item>
                        </layout>
                       </item>
                       <item>
@@ -26934,10 +27256,16 @@ color: white;
                            <bool>false</bool>
                           </property>
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                             <horstretch>1</horstretch>
                             <verstretch>0</verstretch>
                            </sizepolicy>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>65</width>
+                            <height>0</height>
+                           </size>
                           </property>
                          </widget>
                         </item>
@@ -26998,10 +27326,7 @@ color: white;
                          </widget>
                         </item>
                         <item>
-                         <widget class="QWidget" name="widget_81" native="true">
-                          <property name="enabled">
-                           <bool>false</bool>
-                          </property>
+                         <widget class="QWidget" name="widget_84" native="true">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                             <horstretch>1</horstretch>
@@ -27010,25 +27335,6 @@ color: white;
                           </property>
                          </widget>
                         </item>
-                       </layout>
-                      </item>
-                      <item>
-                       <layout class="QHBoxLayout" name="horizontalLayout_184">
-                        <property name="spacing">
-                         <number>12</number>
-                        </property>
-                        <property name="leftMargin">
-                         <number>6</number>
-                        </property>
-                        <property name="topMargin">
-                         <number>1</number>
-                        </property>
-                        <property name="rightMargin">
-                         <number>6</number>
-                        </property>
-                        <property name="bottomMargin">
-                         <number>1</number>
-                        </property>
                         <item>
                          <widget class="SubCallButton" name="update_tool_setter_params">
                           <property name="sizePolicy">
@@ -27039,7 +27345,7 @@ color: white;
                           </property>
                           <property name="minimumSize">
                            <size>
-                            <width>0</width>
+                            <width>235</width>
                             <height>38</height>
                            </size>
                           </property>
@@ -27070,28 +27376,7 @@ color: white;
                      <zorder></zorder>
                      <zorder></zorder>
                      <zorder></zorder>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QWidget" name="widget_69" native="true">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>1</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>16777215</width>
-                       <height>1</height>
-                      </size>
-                     </property>
+                     <zorder>layoutWidget</zorder>
                     </widget>
                    </item>
                    <item>
@@ -30185,7 +30470,7 @@ color: black;
 padding: 20px;</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;IMPORTANT: PLEASE READ, &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic; text-decoration: underline;&quot;&gt;ACTION REQUIRED!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic; text-decoration: underline; color:#170cd9;&quot;&gt;Develop Branch has now become Stable Branch! &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Droid Sans Mono','monospace','monospace'; font-size:14px; color:#000000;&quot;&gt;Probe Basic has moved to a stable and development apt version. This is to give users the ability to try and test the latest working branch of Probe Basic easily via changing the apt source list file. If you are seeing this message, you were already on the develop version, or were on the Stable version and now will need to make some changes to your configuration files. The changes are required and will need to be done before using the interface succesfully. you can follow the guide linked below to accomplish these changes. important note, all the files shown being copied over are required, do not reuse the old version of those files as they will no longer work and cause errors.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Droid Sans Mono','monospace','monospace'; font-size:14px; font-weight:600; color:#000000;&quot;&gt;**Notes:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Droid Sans Mono','monospace','monospace'; font-size:14px; color:#000000;&quot;&gt;see machine config doc for new ini line needed for &amp;quot;user_buttons&amp;quot; and copy over the user_buttons folder from sim into your machine config. this allows users to edit the buttons in the main bottom window left side under the cycle start to adjust for their own use case and machine type. these edits can be done by running editvcp in terminal and navigating to the user_buttons folder and selecting the template_user_buttons.ui file. the changes will remain in the config folder and will not be overwritten on updates.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;For Instructions on changing your config documents, please visit the following url and follow the instructions:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://kcjengr.github.io/probe_basic/machine_config.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://kcjengr.github.io/probe_basic/machine_config.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;If on Develop version you may wish to lock in this new stable release by changing the apt source list to stable, this can be done following the instruction link below:&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://kcjengr.github.io/probe_basic/stable_develop_branch_change.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://kcjengr.github.io/probe_basic/stable_develop_branch_change.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;IMPORTANT: PLEASE READ, &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic; text-decoration: underline;&quot;&gt;ACTION REQUIRED!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic; text-decoration: underline; color:#170cd9;&quot;&gt;1/5/2025 Develop Branch has now become Stable Branch! &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Droid Sans Mono','monospace','monospace'; font-size:14px; color:#000000;&quot;&gt;Probe Basic has moved to a stable and development apt version. This is to give users the ability to try and test the latest working branch of Probe Basic easily via changing the apt source list file. If you are seeing this message, you were already on the develop version, or were on the Stable version and now will need to make some changes to your configuration files. The changes are required and will need to be done before using the interface succesfully. you can follow the guide linked below to accomplish these changes. important note, all the files shown being copied over are required, do not reuse the old version of those files as they will no longer work and cause errors.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Droid Sans Mono','monospace','monospace'; font-size:14px; font-weight:600; color:#000000;&quot;&gt;**Notes:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Droid Sans Mono','monospace','monospace'; font-size:14px; color:#000000;&quot;&gt;see machine config doc for new ini line needed for &amp;quot;user_buttons&amp;quot; and copy over the user_buttons folder from sim into your machine config. this allows users to edit the buttons in the main bottom window left side under the cycle start to adjust for their own use case and machine type. these edits can be done by running editvcp in terminal and navigating to the user_buttons folder and selecting the template_user_buttons.ui file. the changes will remain in the config folder and will not be overwritten on updates.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Droid Sans Mono','monospace','monospace'; font-size:14px; color:#000000;&quot;&gt;A new subroutine has been added for probing the spindle zero height, be sure to copy it over and check for any other changes in subroutines to your existing config's sub files.  meld is a great program for comparing folders and files content!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;For Instructions on changing your config documents, please visit the following url and follow the instructions:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://kcjengr.github.io/probe_basic/machine_config.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://kcjengr.github.io/probe_basic/machine_config.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;If on Develop version you may wish to lock in this new stable release by changing the apt source list to stable, this can be done following the instruction link below:&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://kcjengr.github.io/probe_basic/stable_develop_branch_change.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://kcjengr.github.io/probe_basic/stable_develop_branch_change.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                  <property name="textFormat">
                   <enum>Qt::AutoText</enum>
@@ -36134,7 +36419,7 @@ QLabel[style=&quot;homing&quot;]{
                 </widget>
                </item>
                <item>
-                <widget class="ActionButton" name="axisactionbutton_13">
+                <widget class="ActionButton" name="ref_x_button">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -36163,6 +36448,9 @@ QLabel[style=&quot;homing&quot;]{
                  </property>
                  <property name="text">
                   <string>REF X</string>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;name&quot;: &quot;home_prohibit&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;not (ch[0] or ch[1] or ch[2])&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.1.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.2.homing&quot;, &quot;trigger&quot;: true}]}]</string>
                  </property>
                  <property name="actionName" stdset="0">
                   <string>machine.home.axis:x</string>
@@ -36418,7 +36706,7 @@ QLabel[style=&quot;homing&quot;]{
                 </widget>
                </item>
                <item>
-                <widget class="ActionButton" name="axisactionbutton_10">
+                <widget class="ActionButton" name="ref_y_button">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -36447,6 +36735,9 @@ QLabel[style=&quot;homing&quot;]{
                  </property>
                  <property name="text">
                   <string>REF Y</string>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;name&quot;: &quot;home_prohibit&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;not (ch[0] or ch[1] or ch[2])&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.1.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.2.homing&quot;, &quot;trigger&quot;: true}]}]</string>
                  </property>
                  <property name="actionName" stdset="0">
                   <string>machine.home.axis:y</string>
@@ -36702,7 +36993,7 @@ QLabel[style=&quot;homing&quot;]{
                 </widget>
                </item>
                <item>
-                <widget class="ActionButton" name="axisactionbutton_11">
+                <widget class="ActionButton" name="ref_z_button">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -36731,6 +37022,9 @@ QLabel[style=&quot;homing&quot;]{
                  </property>
                  <property name="text">
                   <string>REF Z</string>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;name&quot;: &quot;home_prohibit&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;not (ch[0] or ch[1] or ch[2])&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.1.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.2.homing&quot;, &quot;trigger&quot;: true}]}]</string>
                  </property>
                  <property name="actionName" stdset="0">
                   <string>machine.home.axis:z</string>
@@ -36821,7 +37115,7 @@ QLabel[style=&quot;homing&quot;]{
                 </widget>
                </item>
                <item>
-                <widget class="ActionButton" name="ref_all_button_4">
+                <widget class="ActionButton" name="ref_all_button">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>1</horstretch>
@@ -36852,7 +37146,7 @@ QLabel[style=&quot;homing&quot;]{
                   <string>REF ALL</string>
                  </property>
                  <property name="rules" stdset="0">
-                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'HOMED' if ch[0] else 'REF ALL'&quot;, &quot;name&quot;: &quot;reference_all&quot;}]</string>
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'HOMED' if ch[0] else 'REF ALL'&quot;, &quot;name&quot;: &quot;reference_all&quot;}, {&quot;name&quot;: &quot;home_prohibit&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;not (ch[0] or ch[1] or ch[2])&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.1.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.2.homing&quot;, &quot;trigger&quot;: true}]}]</string>
                  </property>
                  <property name="actionName" stdset="0">
                   <string>machine.home.all</string>
@@ -37384,7 +37678,7 @@ QLabel[style=&quot;homing&quot;]{
                 </widget>
                </item>
                <item>
-                <widget class="ActionButton" name="axisactionbutton_9">
+                <widget class="ActionButton" name="ref_x_button_1">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -37413,6 +37707,9 @@ QLabel[style=&quot;homing&quot;]{
                  </property>
                  <property name="text">
                   <string>REF X</string>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;name&quot;: &quot;home_prohibit&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;not (ch[0] or ch[1] or ch[2] or ch[3])&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.1.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.2.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.3.homing&quot;, &quot;trigger&quot;: true}]}]</string>
                  </property>
                  <property name="actionName" stdset="0">
                   <string>machine.home.axis:x</string>
@@ -37668,7 +37965,7 @@ QLabel[style=&quot;homing&quot;]{
                 </widget>
                </item>
                <item>
-                <widget class="ActionButton" name="axisactionbutton_5">
+                <widget class="ActionButton" name="ref_y_button_1">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -37697,6 +37994,9 @@ QLabel[style=&quot;homing&quot;]{
                  </property>
                  <property name="text">
                   <string>REF Y</string>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;name&quot;: &quot;home_prohibit&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;not (ch[0] or ch[1] or ch[2] or ch[3])&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.1.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.2.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.3.homing&quot;, &quot;trigger&quot;: true}]}]</string>
                  </property>
                  <property name="actionName" stdset="0">
                   <string>machine.home.axis:y</string>
@@ -37952,7 +38252,7 @@ QLabel[style=&quot;homing&quot;]{
                 </widget>
                </item>
                <item>
-                <widget class="ActionButton" name="axisactionbutton_7">
+                <widget class="ActionButton" name="ref_z_button_1">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -37981,6 +38281,9 @@ QLabel[style=&quot;homing&quot;]{
                  </property>
                  <property name="text">
                   <string>REF Z</string>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;name&quot;: &quot;home_prohibit&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;not (ch[0] or ch[1] or ch[2] or ch[3])&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.1.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.2.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.3.homing&quot;, &quot;trigger&quot;: true}]}]</string>
                  </property>
                  <property name="actionName" stdset="0">
                   <string>machine.home.axis:z</string>
@@ -38066,7 +38369,7 @@ QLabel[style=&quot;homing&quot;]{
 ]</string>
                  </property>
                  <property name="MDICommand" stdset="0">
-                  <string>G10 L2 P{ch[0]} A0.0</string>
+                  <string>G10 L20 P{ch[0]} A0.0</string>
                  </property>
                 </widget>
                </item>
@@ -38235,7 +38538,7 @@ QLabel[style=&quot;homing&quot;]{
                 </widget>
                </item>
                <item>
-                <widget class="ActionButton" name="axisactionbutton_8">
+                <widget class="ActionButton" name="ref_a_button">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -38264,6 +38567,9 @@ QLabel[style=&quot;homing&quot;]{
                  </property>
                  <property name="text">
                   <string>REF A</string>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;name&quot;: &quot;New Rule&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;not (ch[0] or ch[1] or ch[2] or ch[3])&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.1.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.2.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.3.homing&quot;, &quot;trigger&quot;: true}]}]</string>
                  </property>
                  <property name="actionName" stdset="0">
                   <string>machine.home.axis:a</string>
@@ -38354,7 +38660,7 @@ QLabel[style=&quot;homing&quot;]{
                 </widget>
                </item>
                <item>
-                <widget class="ActionButton" name="ref_all_button_5">
+                <widget class="ActionButton" name="ref_all_button_1">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>1</horstretch>
@@ -38385,7 +38691,7 @@ QLabel[style=&quot;homing&quot;]{
                   <string>REF ALL</string>
                  </property>
                  <property name="rules" stdset="0">
-                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'HOMED' if ch[0] else 'REF ALL'&quot;, &quot;name&quot;: &quot;reference_all&quot;}]</string>
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'HOMED' if ch[0] else 'REF ALL'&quot;, &quot;name&quot;: &quot;reference_all&quot;}, {&quot;name&quot;: &quot;home_prohibit&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;not (ch[0] or ch[1] or ch[2] or ch[3])&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.1.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.2.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.3.homing&quot;, &quot;trigger&quot;: true}]}]</string>
                  </property>
                  <property name="actionName" stdset="0">
                   <string>machine.home.all</string>
@@ -38660,7 +38966,7 @@ QLabel[style=&quot;homing&quot;]{
                 </widget>
                </item>
                <item>
-                <widget class="ActionButton" name="ref_all_button">
+                <widget class="ActionButton" name="ref_all_button_3">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                    <horstretch>1</horstretch>
@@ -38691,7 +38997,7 @@ QLabel[style=&quot;homing&quot;]{
                   <string>REF ALL</string>
                  </property>
                  <property name="rules" stdset="0">
-                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'HOMED' if ch[0] else 'REF ALL'&quot;, &quot;name&quot;: &quot;reference_all&quot;}]</string>
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'HOMED' if ch[0] else 'REF ALL'&quot;, &quot;name&quot;: &quot;reference_all&quot;}, {&quot;name&quot;: &quot;home_inhibit&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;not (ch[0] or ch[1] or ch[2] or ch[3] or ch[4])&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.1.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.2.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.3.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.4.homing&quot;, &quot;trigger&quot;: true}]}]</string>
                  </property>
                  <property name="actionName" stdset="0">
                   <string>machine.home.all</string>
@@ -38968,7 +39274,7 @@ QLabel[style=&quot;homing&quot;]{
                 </widget>
                </item>
                <item>
-                <widget class="ActionButton" name="axisactionbutton_6">
+                <widget class="ActionButton" name="ref_x_button_2">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -38997,6 +39303,9 @@ QLabel[style=&quot;homing&quot;]{
                  </property>
                  <property name="text">
                   <string>REF X</string>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;name&quot;: &quot;home_prohibit&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;not (ch[0] or ch[1] or ch[2] or ch[3] or ch[4])&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.1.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.2.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.3.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.4.homing&quot;, &quot;trigger&quot;: true}]}]</string>
                  </property>
                  <property name="actionName" stdset="0">
                   <string>machine.home.axis:x</string>
@@ -39252,7 +39561,7 @@ QLabel[style=&quot;homing&quot;]{
                 </widget>
                </item>
                <item>
-                <widget class="ActionButton" name="axisactionbutton_3">
+                <widget class="ActionButton" name="ref_y_button_2">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -39281,6 +39590,9 @@ QLabel[style=&quot;homing&quot;]{
                  </property>
                  <property name="text">
                   <string>REF Y</string>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;name&quot;: &quot;home_prohibit&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;not (ch[0] or ch[1] or ch[2] or ch[3] or ch[4])&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.1.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.2.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.3.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.4.homing&quot;, &quot;trigger&quot;: true}]}]</string>
                  </property>
                  <property name="actionName" stdset="0">
                   <string>machine.home.axis:y</string>
@@ -39533,7 +39845,7 @@ QLabel[style=&quot;homing&quot;]{
                 </widget>
                </item>
                <item>
-                <widget class="ActionButton" name="axisactionbutton">
+                <widget class="ActionButton" name="ref_z_button_2">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -39562,6 +39874,9 @@ QLabel[style=&quot;homing&quot;]{
                  </property>
                  <property name="text">
                   <string>REF Z</string>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;name&quot;: &quot;home_prohibit&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;not (ch[0] or ch[1] or ch[2] or ch[3] or ch[4])&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.1.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.2.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.3.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.4.homing&quot;, &quot;trigger&quot;: true}]}]</string>
                  </property>
                  <property name="actionName" stdset="0">
                   <string>machine.home.axis:z</string>
@@ -39816,7 +40131,7 @@ QLabel[style=&quot;homing&quot;]{
                 </widget>
                </item>
                <item>
-                <widget class="ActionButton" name="axisactionbutton_2">
+                <widget class="ActionButton" name="ref_a_button_1">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -39845,6 +40160,9 @@ QLabel[style=&quot;homing&quot;]{
                  </property>
                  <property name="text">
                   <string>REF A</string>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;name&quot;: &quot;home_inhibit&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;not (ch[0] or ch[1] or ch[2] or ch[3] or ch[4])&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.1.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.2.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.3.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.4.homing&quot;, &quot;trigger&quot;: true}]}]</string>
                  </property>
                  <property name="actionName" stdset="0">
                   <string>machine.home.axis:a</string>
@@ -40115,7 +40433,7 @@ QLabel[style=&quot;homing&quot;]{
                 </widget>
                </item>
                <item>
-                <widget class="ActionButton" name="axisactionbutton_4">
+                <widget class="ActionButton" name="ref_b_button">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -40144,6 +40462,9 @@ QLabel[style=&quot;homing&quot;]{
                  </property>
                  <property name="text">
                   <string>REF B</string>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;name&quot;: &quot;home_inhibit&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;not (ch[0] or ch[1] or ch[2] or ch[3] or ch[4])&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.1.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.2.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.3.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.4.homing&quot;, &quot;trigger&quot;: true}]}]</string>
                  </property>
                  <property name="actionName" stdset="0">
                   <string>machine.home.axis:b</string>
@@ -40418,7 +40739,7 @@ QLabel[style=&quot;homing&quot;]{
                 </widget>
                </item>
                <item>
-                <widget class="ActionButton" name="ref_all_button_3">
+                <widget class="ActionButton" name="ref_all_button_4">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                    <horstretch>1</horstretch>
@@ -40449,7 +40770,7 @@ QLabel[style=&quot;homing&quot;]{
                   <string>REF ALL</string>
                  </property>
                  <property name="rules" stdset="0">
-                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'HOMED' if ch[0] else 'REF ALL'&quot;, &quot;name&quot;: &quot;reference_all&quot;}]</string>
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'HOMED' if ch[0] else 'REF ALL'&quot;, &quot;name&quot;: &quot;reference_all&quot;}, {&quot;name&quot;: &quot;home_inhibit&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;not (ch[0] or ch[1] or ch[2] or ch[3] or ch[4])&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.1.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.2.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.3.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.4.homing&quot;, &quot;trigger&quot;: true}]}]</string>
                  </property>
                  <property name="actionName" stdset="0">
                   <string>machine.home.all</string>
@@ -40726,7 +41047,7 @@ QLabel[style=&quot;homing&quot;]{
                 </widget>
                </item>
                <item>
-                <widget class="ActionButton" name="axisactionbutton_17">
+                <widget class="ActionButton" name="ref_x_button_3">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -40755,6 +41076,9 @@ QLabel[style=&quot;homing&quot;]{
                  </property>
                  <property name="text">
                   <string>REF X</string>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;name&quot;: &quot;home_prohibit&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;not (ch[0] or ch[1] or ch[2] or ch[3] or ch[4])&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.1.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.2.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.3.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.4.homing&quot;, &quot;trigger&quot;: true}]}]</string>
                  </property>
                  <property name="actionName" stdset="0">
                   <string>machine.home.axis:x</string>
@@ -41010,7 +41334,7 @@ QLabel[style=&quot;homing&quot;]{
                 </widget>
                </item>
                <item>
-                <widget class="ActionButton" name="axisactionbutton_18">
+                <widget class="ActionButton" name="ref_y_button_3">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -41039,6 +41363,9 @@ QLabel[style=&quot;homing&quot;]{
                  </property>
                  <property name="text">
                   <string>REF Y</string>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;name&quot;: &quot;home_prohibit&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;not (ch[0] or ch[1] or ch[2] or ch[3] or ch[4])&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.1.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.2.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.3.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.4.homing&quot;, &quot;trigger&quot;: true}]}]</string>
                  </property>
                  <property name="actionName" stdset="0">
                   <string>machine.home.axis:y</string>
@@ -41291,7 +41618,7 @@ QLabel[style=&quot;homing&quot;]{
                 </widget>
                </item>
                <item>
-                <widget class="ActionButton" name="axisactionbutton_19">
+                <widget class="ActionButton" name="ref_z_button_3">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -41320,6 +41647,9 @@ QLabel[style=&quot;homing&quot;]{
                  </property>
                  <property name="text">
                   <string>REF Z</string>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;name&quot;: &quot;home_prohibit&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;not (ch[0] or ch[1] or ch[2] or ch[3] or ch[4])&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.1.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.2.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.3.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.4.homing&quot;, &quot;trigger&quot;: true}]}]</string>
                  </property>
                  <property name="actionName" stdset="0">
                   <string>machine.home.axis:z</string>
@@ -41574,7 +41904,7 @@ QLabel[style=&quot;homing&quot;]{
                 </widget>
                </item>
                <item>
-                <widget class="ActionButton" name="axisactionbutton_20">
+                <widget class="ActionButton" name="ref_a_button_2">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -41603,6 +41933,9 @@ QLabel[style=&quot;homing&quot;]{
                  </property>
                  <property name="text">
                   <string>REF A</string>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;name&quot;: &quot;home_inhibit&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;not (ch[0] or ch[1] or ch[2] or ch[3] or ch[4])&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.1.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.2.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.3.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.4.homing&quot;, &quot;trigger&quot;: true}]}]</string>
                  </property>
                  <property name="actionName" stdset="0">
                   <string>machine.home.axis:a</string>
@@ -41873,7 +42206,7 @@ QLabel[style=&quot;homing&quot;]{
                 </widget>
                </item>
                <item>
-                <widget class="ActionButton" name="axisactionbutton_21">
+                <widget class="ActionButton" name="ref_c_button">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -41902,6 +42235,9 @@ QLabel[style=&quot;homing&quot;]{
                  </property>
                  <property name="text">
                   <string>REF C</string>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;name&quot;: &quot;home_inhibit&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;not (ch[0] or ch[1] or ch[2] or ch[3] or ch[4])&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.1.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.2.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.3.homing&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint.4.homing&quot;, &quot;trigger&quot;: true}]}]</string>
                  </property>
                  <property name="actionName" stdset="0">
                   <string>machine.home.axis:c</string>
@@ -44156,8 +44492,8 @@ font: 11pt bebas kai;
    <slot>runSelection()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>212</x>
-     <y>606</y>
+     <x>93</x>
+     <y>122</y>
     </hint>
     <hint type="destinationlabel">
      <x>259</x>
@@ -44188,8 +44524,8 @@ font: 11pt bebas kai;
    <slot>removeAll()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>159</x>
-     <y>545</y>
+     <x>92</x>
+     <y>112</y>
     </hint>
     <hint type="destinationlabel">
      <x>143</x>
@@ -44204,8 +44540,8 @@ font: 11pt bebas kai;
    <slot>removeSelectedItem()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>89</x>
-     <y>545</y>
+     <x>83</x>
+     <y>112</y>
     </hint>
     <hint type="destinationlabel">
      <x>114</x>
@@ -44252,8 +44588,8 @@ font: 11pt bebas kai;
    <slot>runFromSelection()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>111</x>
-     <y>606</y>
+     <x>83</x>
+     <y>122</y>
     </hint>
     <hint type="destinationlabel">
      <x>163</x>
@@ -44288,8 +44624,8 @@ font: 11pt bebas kai;
      <y>664</y>
     </hint>
     <hint type="destinationlabel">
-     <x>122</x>
-     <y>664</y>
+     <x>136</x>
+     <y>663</y>
     </hint>
    </hints>
   </connection>
@@ -44460,12 +44796,12 @@ font: 11pt bebas kai;
    <slot>moveRowItemUp()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>385</x>
-     <y>545</y>
+     <x>121</x>
+     <y>112</y>
     </hint>
     <hint type="destinationlabel">
-     <x>379</x>
-     <y>75</y>
+     <x>385</x>
+     <y>52</y>
     </hint>
    </hints>
   </connection>
@@ -44476,12 +44812,12 @@ font: 11pt bebas kai;
    <slot>submit()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>670</x>
-     <y>602</y>
+     <x>109</x>
+     <y>140</y>
     </hint>
     <hint type="destinationlabel">
-     <x>379</x>
-     <y>75</y>
+     <x>385</x>
+     <y>52</y>
     </hint>
    </hints>
   </connection>
@@ -44492,8 +44828,8 @@ font: 11pt bebas kai;
    <slot>toggleQueue(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>311</x>
-     <y>545</y>
+     <x>108</x>
+     <y>112</y>
     </hint>
     <hint type="destinationlabel">
      <x>306</x>
@@ -44508,8 +44844,8 @@ font: 11pt bebas kai;
    <slot>clearQueue()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>235</x>
-     <y>545</y>
+     <x>100</x>
+     <y>112</y>
     </hint>
     <hint type="destinationlabel">
      <x>238</x>
@@ -44556,12 +44892,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>122</x>
-     <y>664</y>
+     <x>136</x>
+     <y>663</y>
     </hint>
     <hint type="destinationlabel">
-     <x>670</x>
-     <y>602</y>
+     <x>109</x>
+     <y>140</y>
     </hint>
    </hints>
   </connection>
@@ -44604,12 +44940,12 @@ font: 11pt bebas kai;
    <slot>moveRowItemDown()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>385</x>
-     <y>606</y>
+     <x>117</x>
+     <y>122</y>
     </hint>
     <hint type="destinationlabel">
-     <x>379</x>
-     <y>75</y>
+     <x>385</x>
+     <y>52</y>
     </hint>
    </hints>
   </connection>
@@ -44652,8 +44988,8 @@ font: 11pt bebas kai;
    <slot>copySelectionToGcodeEditor()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>311</x>
-     <y>606</y>
+     <x>103</x>
+     <y>122</y>
     </hint>
     <hint type="destinationlabel">
      <x>320</x>
@@ -45085,10 +45421,10 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>88</y>
+     <y>122</y>
     </hint>
     <hint type="destinationlabel">
-     <x>201</x>
+     <x>685</x>
      <y>82</y>
     </hint>
    </hints>
@@ -45101,10 +45437,10 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>90</y>
+     <y>216</y>
     </hint>
     <hint type="destinationlabel">
-     <x>248</x>
+     <x>1034</x>
      <y>82</y>
     </hint>
    </hints>
@@ -45117,10 +45453,10 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>89</y>
+     <y>169</y>
     </hint>
     <hint type="destinationlabel">
-     <x>248</x>
+     <x>1034</x>
      <y>82</y>
     </hint>
    </hints>
@@ -45133,10 +45469,10 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>91</y>
+     <y>263</y>
     </hint>
     <hint type="destinationlabel">
-     <x>248</x>
+     <x>1034</x>
      <y>82</y>
     </hint>
    </hints>
@@ -45149,10 +45485,10 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>92</y>
+     <y>310</y>
     </hint>
     <hint type="destinationlabel">
-     <x>200</x>
+     <x>1159</x>
      <y>82</y>
     </hint>
    </hints>
@@ -45165,10 +45501,10 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>93</y>
+     <y>357</y>
     </hint>
     <hint type="destinationlabel">
-     <x>200</x>
+     <x>1159</x>
      <y>82</y>
     </hint>
    </hints>
@@ -45181,10 +45517,10 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>94</y>
+     <y>403</y>
     </hint>
     <hint type="destinationlabel">
-     <x>200</x>
+     <x>1289</x>
      <y>82</y>
     </hint>
    </hints>
@@ -45197,10 +45533,10 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>204</x>
-     <y>83</y>
+     <y>298</y>
     </hint>
     <hint type="destinationlabel">
-     <x>248</x>
+     <x>861</x>
      <y>82</y>
     </hint>
    </hints>
@@ -45213,10 +45549,10 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>169</x>
-     <y>83</y>
+     <y>343</y>
     </hint>
     <hint type="destinationlabel">
-     <x>201</x>
+     <x>1549</x>
      <y>82</y>
     </hint>
    </hints>
@@ -45229,11 +45565,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>88</y>
+     <y>122</y>
     </hint>
     <hint type="destinationlabel">
-     <x>119</x>
-     <y>83</y>
+     <x>372</x>
+     <y>573</y>
     </hint>
    </hints>
   </connection>
@@ -45245,11 +45581,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>90</y>
+     <y>216</y>
     </hint>
     <hint type="destinationlabel">
-     <x>119</x>
-     <y>83</y>
+     <x>372</x>
+     <y>573</y>
     </hint>
    </hints>
   </connection>
@@ -45261,11 +45597,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>89</y>
+     <y>169</y>
     </hint>
     <hint type="destinationlabel">
-     <x>119</x>
-     <y>83</y>
+     <x>372</x>
+     <y>573</y>
     </hint>
    </hints>
   </connection>
@@ -45277,11 +45613,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>91</y>
+     <y>263</y>
     </hint>
     <hint type="destinationlabel">
-     <x>119</x>
-     <y>83</y>
+     <x>372</x>
+     <y>573</y>
     </hint>
    </hints>
   </connection>
@@ -45293,11 +45629,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>92</y>
+     <y>310</y>
     </hint>
     <hint type="destinationlabel">
-     <x>119</x>
-     <y>83</y>
+     <x>372</x>
+     <y>573</y>
     </hint>
    </hints>
   </connection>
@@ -45309,11 +45645,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>93</y>
+     <y>357</y>
     </hint>
     <hint type="destinationlabel">
-     <x>119</x>
-     <y>83</y>
+     <x>372</x>
+     <y>573</y>
     </hint>
    </hints>
   </connection>
@@ -45325,11 +45661,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>94</y>
+     <y>403</y>
     </hint>
     <hint type="destinationlabel">
-     <x>119</x>
-     <y>83</y>
+     <x>372</x>
+     <y>573</y>
     </hint>
    </hints>
   </connection>
@@ -45341,11 +45677,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>272</x>
-     <y>93</y>
+     <y>357</y>
     </hint>
     <hint type="destinationlabel">
-     <x>119</x>
-     <y>83</y>
+     <x>372</x>
+     <y>573</y>
     </hint>
    </hints>
   </connection>
@@ -45357,11 +45693,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>272</x>
-     <y>94</y>
+     <y>403</y>
     </hint>
     <hint type="destinationlabel">
-     <x>119</x>
-     <y>83</y>
+     <x>372</x>
+     <y>573</y>
     </hint>
    </hints>
   </connection>
@@ -45372,12 +45708,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>308</x>
-     <y>100</y>
+     <x>179</x>
+     <y>546</y>
     </hint>
     <hint type="destinationlabel">
-     <x>119</x>
-     <y>83</y>
+     <x>372</x>
+     <y>573</y>
     </hint>
    </hints>
   </connection>
@@ -45389,10 +45725,10 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>169</x>
-     <y>83</y>
+     <y>389</y>
     </hint>
     <hint type="destinationlabel">
-     <x>200</x>
+     <x>1419</x>
      <y>82</y>
     </hint>
    </hints>
@@ -45404,11 +45740,11 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>393</x>
-     <y>103</y>
+     <x>264</x>
+     <y>548</y>
     </hint>
     <hint type="destinationlabel">
-     <x>200</x>
+     <x>1419</x>
      <y>82</y>
     </hint>
    </hints>
@@ -45420,11 +45756,11 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>236</x>
-     <y>103</y>
+     <x>107</x>
+     <y>548</y>
     </hint>
     <hint type="destinationlabel">
-     <x>200</x>
+     <x>1419</x>
      <y>82</y>
     </hint>
    </hints>
@@ -45436,11 +45772,11 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>315</x>
-     <y>102</y>
+     <x>184</x>
+     <y>501</y>
     </hint>
     <hint type="destinationlabel">
-     <x>200</x>
+     <x>1419</x>
      <y>82</y>
     </hint>
    </hints>
@@ -45452,11 +45788,11 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>315</x>
-     <y>104</y>
+     <x>184</x>
+     <y>595</y>
     </hint>
     <hint type="destinationlabel">
-     <x>200</x>
+     <x>1419</x>
      <y>82</y>
     </hint>
    </hints>
@@ -45861,6 +46197,54 @@ font: 11pt bebas kai;
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>breakage_tolerance_3037</sender>
+   <signal>cursorPositionChanged(int,int)</signal>
+   <receiver>update_tool_setter_params</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>448</x>
+     <y>429</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>437</x>
+     <y>564</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>user_setter_1_3038</sender>
+   <signal>cursorPositionChanged(int,int)</signal>
+   <receiver>update_tool_setter_params</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>470</x>
+     <y>481</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>470</x>
+     <y>559</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>user_setter_2_3039</sender>
+   <signal>cursorPositionChanged(int,int)</signal>
+   <receiver>update_tool_setter_params</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>497</x>
+     <y>526</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>494</x>
+     <y>564</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <designerdata>
   <property name="gridDeltaX">
@@ -45880,18 +46264,18 @@ font: 11pt bebas kai;
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="probepagewcsbtnGroup"/>
-  <buttongroup name="gcodemdibtnGroup"/>
-  <buttongroup name="tooloffsetdirbtnGroup"/>
   <buttongroup name="btngrpMdi"/>
   <buttongroup name="spindlerpmsourcebtnGroup"/>
-  <buttongroup name="customwcsbtnGroup"/>
-  <buttongroup name="sidebartabGroup"/>
-  <buttongroup name="xycalbtnGroup"/>
-  <buttongroup name="proberoutinebtnGroup"/>
-  <buttongroup name="settertabGroup"/>
+  <buttongroup name="gcodemdibtnGroup"/>
   <buttongroup name="probetabGroup"/>
+  <buttongroup name="probepagewcsbtnGroup"/>
+  <buttongroup name="tooloffsetdirbtnGroup"/>
+  <buttongroup name="proberoutinebtnGroup"/>
+  <buttongroup name="xycalbtnGroup"/>
+  <buttongroup name="sidebartabGroup"/>
   <buttongroup name="probehelpGroup"/>
+  <buttongroup name="settertabGroup"/>
+  <buttongroup name="customwcsbtnGroup"/>
   <buttongroup name="mainorthoperspbtnGroup"/>
  </buttongroups>
 </ui>

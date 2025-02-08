@@ -8,7 +8,6 @@ Important Requirements
 ----------------------
 
     - Probe Basic is currently designed for 1920x1080 screen sizes only!
-    - Probe Basic Install by apt is for amd64 only currently!
     - Probe Basic requires graphics hardware that supports OpenGL 3.2 and OpenGL Shading Language (GLSL) 1.50 or later
     - Probe Basic is tested on xfce4, during install of Debian 12 ISO:
     - DO NOT enter a Root password during installation, leave blank and skip this page.
@@ -49,13 +48,30 @@ Installation Steps
 3. Install LinuxCNC
 ^^^^^^^^^^^^^^^^^^^
 
-    If you have not already installed LinuxCNC from apt, use the following command:
+   Amd64 Deb (for PC's):
+   
+      https://www.linuxcnc.org/dists/bookworm/2.9-uspace/binary-amd64/linuxcnc-uspace_2.9.3_amd64.deb
 
-    .. code-block:: bash
+   
+   Arm64 Deb (for Pi 4/5)
 
-        sudo apt install linuxcnc-uspace linuxcnc-uspace-dev mesaflash
+      https://www.linuxcnc.org/dists/bookworm/2.9-uspace/binary-arm64/linuxcnc-uspace_2.9.3_arm64.deb
+
+
+
+   In a terminal, enter the following lines one at a time and press enter after each:
+
+      .. code-block:: bash
+
+         cd ~
+         
+         cd Downloads
+         
+         sudo dpkg -i linuxcnc-uspace_2.9.3_amd64.deb
+
 
     Once you have installed LinuxCNC, open it and start the axis sim briefly and then shut it down to ensure the installation was successful.
+
 
 4. Add the APT Repository for the Installation type
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
